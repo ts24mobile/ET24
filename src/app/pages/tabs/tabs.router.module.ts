@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { TabsPage } from './tabs.page';
+import { HomeDetailPage } from '../home/home-detail/home-detail.page';
 
 const routes: Routes = [
   {
@@ -13,7 +14,11 @@ const routes: Routes = [
           {
             path: '',
             loadChildren: '../home/home.module#HomePageModule'
-          }
+          },
+          {
+            path: 'home-detail',
+            loadChildren: '../home/home-detail/home-detail.module#HomeDetailPageModule'
+          },
         ]
       },
       {

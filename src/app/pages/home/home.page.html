@@ -1,9 +1,70 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>home</ion-title>
+    <ion-title>Trang chủ</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <!-- Banner khám phá-->
+  <div class="__banner">
+    <ion-slides pager="true">
+      <ion-slide>
+        <img
+          src="https://res.klook.com/image/upload/fl_lossy.progressive,q_85/c_fill,w_640,,/v1556780515/banner/q2i27wpqxtkcqbzalssz.jpg" />
+        <div class="bottom t_white m_main">
+          <h1> TỰ DO KHÁM PHÁ </h1>
+          <p class="t14"> Khám phá và đặt các hoạt động du lịch đặc sắc với giá độc quyền </p>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <img
+          src="https://res.klook.com/image/upload/fl_lossy.progressive,q_85/c_fill,w_640,,/v1556780501/banner/yeu4lhcnriegnsuofi2p.jpg" />
+        <div class="bottom t_white m_main">
+          <h1> TỰ DO KHÁM PHÁ </h1>
+          <p class="t14"> Khám phá và đặt các hoạt động du lịch đặc sắc với giá độc quyền </p>
+        </div>
+      </ion-slide>
 
+    </ion-slides>
+  </div>
+
+  <!-- Quảng cáo-->
+  <section class="m_main">
+    <div class="s_banner m_radius_box swiper-container banner-swiper-container swiper-container-horizontal">
+      <div class="swiper-wrapper"><a href="https://www.suoitien.com"
+          class="track-custom-event j_section_banner swiper-slide banner_block m_radius_box m_bg_img swiper-slide-active"
+          style="background-image: url('https://www.suoitien.com//Data/Sites/1/Banner/su%E1%BB%91i-ti%C3%AAn-(739).jpg'); margin-right: 50px;"></a>
+      </div>
+      <div class="swiper-pagination banner-swiper-pagination swiper-pagination-clickable swiper-pagination-bullets">
+        <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span></div>
+    </div>
+  </section>
+  <!-- Địa điểm phổ biến-->
+  <div class="m_card_list hot_destination">
+    <header class="title"> Điểm đến phổ biến </header>
+    <div
+      class="city_list swiper-container city-swiper-container swiper-container-horizontal swiper-container-free-mode">
+      <div class="swiper-wrapper">
+        <div (click)="place_onClick()" class="city_block swiper-slide m_radius_box m_bg_img g_rel swiper-slide-prev"
+          style="background-image: url(&quot;https://vntrip.cdn.vccloud.vn/cam-nang/wp-content/uploads/2017/09/anh23-3.png&quot;); width: 160.455px; margin-right: 10px;">
+          <p class="m_cover_block j_hot_destination"><span class="subname t_white"><b>SUỐI
+                TIÊN</b></span></p>
+        </div>
+        <div class="city_block swiper-slide m_radius_box m_bg_img g_rel swiper-slide-prev"
+          style="background-image: url(&quot;https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_800,h_448,f_auto/w_80,x_15,y_15,g_south_west,l_klook_water/activities/vec3azfslufi40dgb8dk/.jpg&quot;); width: 160.455px; margin-right: 10px;">
+          <p class="m_cover_block j_hot_destination"><span class="subname t_white"><b>BÀ NÀ
+                HILL</b></span></p>
+        </div>
+        <div class="city_block swiper-slide m_radius_box m_bg_img g_rel swiper-slide-prev"
+          style="background-image: url(&quot;https://platinumlist.net/upload/event/dam_sen_park_2018_jan_22_dam_sen_park_66651-full1516100309.jpg&quot;); width: 160.455px; margin-right: 10px;">
+          <p class="m_cover_block j_hot_destination"><span class="subname t_white"><b>ĐẦM SEN</b></span></p>
+        </div>
+        <div class="city_block swiper-slide m_radius_box m_bg_img g_rel swiper-slide-prev"
+          style="background-image: url(&quot;https://infok.vn/images/media/infok.vn-02-mouu_w650.jpg&quot;); width: 160.455px; margin-right: 10px;">
+          <p class="m_cover_block j_hot_destination"><span class="subname t_white"><b>THẢO CẦM VIÊN</b></span></p>
+        </div>
+      </div>
+    </div>
+    <p class="allDestination btn_border_gray t16"><span>Tất cả điểm đến</span></p>
+  </div>
 </ion-content>

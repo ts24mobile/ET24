@@ -1,5 +1,7 @@
 {
   "name": "ET24",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

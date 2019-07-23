@@ -1,0 +1,643 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Chi tiết</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!--  Banner-->
+  <div class="city-banner m_bg_img" id="bannerImg"
+    style="background-image: url('https://res.klook.com/image/upload/fl_lossy.progressive,q_85/c_fill,w_828,h_1100/Mobile/City/iunzgysin5mywqoo8xzl.jpg')"
+    data-original="https://res.klook.com/image/upload/fl_lossy.progressive,q_85/c_fill,w_828,h_1100/Mobile/City/iunzgysin5mywqoo8xzl.jpg">
+    <div class="city-banner--mask" id="bannerMask" style="background-color: rgba(54, 23, 50, 0.4);">
+      <div class="city-banner--mask__bottom" id="bottomMask"
+        style="background-image: linear-gradient(rgba(54, 23, 50, 0), rgb(54, 23, 50));">
+      </div>
+
+      <div class="city-banner--title-box t_mid t_white flex_v_h">
+        <a class="flex_v_h" href="/vi/destination_list">
+          <h1 class="city-banner--title">
+            Singapore
+          </h1>
+          <i class="klook-icon-arrowDown t24 t_white"></i>
+        </a>
+      </div>
+      <div class="city-banner--function-box t_white">
+        <div class="flex_v_justify t_white t14">
+          <div class="city-banner--weather flex_vc j_weather_box js-temp-view"
+            data-track-event="Destination Page V2|Weather Section Clicked">
+            <svg class="klook-symbol t24" aria-hidden="true">
+              <use xlink:href="#icon-32-weather-heavy-rain"></use>
+            </svg>
+            <span data-celsius="30" data-sign-c="°C" data-sign-f="°F">30°C</span>
+            <span data-celsius="24" data-sign-c="°C" data-sign-f="°F" class="t_gray">24°C</span>
+            <i class="klook-icon-arrowDown t14"></i>
+          </div>
+        </div>
+
+
+        <div class="city-banner--about g_rel">
+          <a href="/vi/city/6/detail" data-track-event="Destination Page V2|About City Button Clicked|6">
+            <div class="city-banner--about__notmiss t_nowrap t_white ">
+              <span class="t12">Đừng bỏ lỡ：</span>
+              <span class="keyword">
+                <span class="t10">Nghệ thuật và Sáng tạo</span>|
+                <span class="t10">Khám phá nông thôn</span>|
+                <span class="t10">Công viên giải trí cực đỉnh</span>|
+                <span class="t10">Trải nghiệm ẩm thực hấp dẫn</span>|
+              </span>
+            </div>
+            <div class="city-banner--about-btn t16">Về Singapore</div>
+          </a>
+        </div>
+
+        <a class="city-banner--search m_bg_white flex_vc"
+          href="/vi/search/?type=city&amp;city_name=Singapore&amp;city_id=6">
+          <i class="klook-icon-search t_gray t24"></i>
+          <span class="t16 t_gray t_nowrap">Tìm hoạt động theo Singapore</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tien ich-->
+  <div id="cateBg" class="city-cate--bg"
+    style="background-image: linear-gradient(to top, rgba(54, 23, 50, 0), rgb(54, 23, 50));">
+    <div class="city-cate--box m_bg_white">
+      <header class="city-cate--header flex_v_justify t14">
+        Hoạt động
+      </header>
+      <ul class="city-cate--things-ul">
+        <li><a href="/vi/city/6-singapore/?template_ids=1"
+            data-track-event="Destination Page V2|Destination Page Category Clicked|Vé tham quan &amp; Show"
+            class="flex_vc"><svg aria-hidden="true" class="klook-symbol t24">
+              <use xlink:href="#icon-city-cate-1"></use>
+            </svg> <span class="t16 t_black">Vé tham quan &amp; Show</span></a></li>
+        <li><a href="/vi/city/6-singapore/?template_ids=2"
+            data-track-event="Destination Page V2|Destination Page Category Clicked|Tour &amp; Tham quan ngắm cảnh"
+            class="flex_vc"><svg aria-hidden="true" class="klook-symbol t24">
+              <use xlink:href="#icon-city-cate-2"></use>
+            </svg> <span class="t16 t_black">Tour &amp; Tham quan ngắm cảnh</span></a></li>
+        <li><a href="/vi/city/6-singapore/?template_ids=3"
+            data-track-event="Destination Page V2|Destination Page Category Clicked|Hoạt động &amp; Trải nghiệm"
+            class="flex_vc"><svg aria-hidden="true" class="klook-symbol t24">
+              <use xlink:href="#icon-city-cate-3"></use>
+            </svg> <span class="t16 t_black">Hoạt động &amp; Trải nghiệm</span></a></li>
+        <li><a href="/vi/city/6-singapore/?template_ids=5"
+            data-track-event="Destination Page V2|Destination Page Category Clicked|Vận chuyển &amp; Wifi"
+            class="flex_vc"><svg aria-hidden="true" class="klook-symbol t24">
+              <use xlink:href="#icon-city-cate-5"></use>
+            </svg> <span class="t16 t_black">Vận chuyển &amp; Wifi</span></a></li>
+        <li><a href="/vi/city/6-singapore/?template_ids=" data-track-event="Destination Page V2|Browse All Clicked"
+            class="t14 t_black flex_v_h view_all_btn">Xem tất cả </a></li>
+      </ul>
+      <header class="city-cate--header t14">Bạn đường du lịch</header>
+      <ul class="city-cate--service-ul flex_v_justify">
+        <li><a target="_blank" href="/vi/fnb/6-singapore/" data-vars-category="Destination Page V2"
+            data-vars-action="Travel Services Clicked" data-vars-label="fnb"
+            data-track-event="Destination Page V2|Travel Services Clicked|fnb"
+            class="flex_vc city-cate--service-item__fnb j-fnb_service j_fnb track-custom-event"><span class="t14">Ẩm
+              thực &amp; Nhà hàng</span> <i class="klook-icon-city2-food"></i></a></li>
+        <li><a target="_blank" href="/vi/wifi-sim-card/?city_id=6" data-vars-category="Destination Page V2"
+            data-vars-action="Travel Services Clicked" data-vars-label="wifi"
+            data-track-event="Destination Page V2|Travel Services Clicked|wifi"
+            class="flex_vc city-cate--service-item__wifi j-wifi_service track-custom-event"><span class="t14">WiFi &amp;
+              SIM </span> <i class="klook-icon-city2-wifi"></i></a></li>
+        <li><a target="_blank" href="/vi/transfer-white-label" data-track-event="|Travel Services Clicked|whiteLabel"
+            class="flex_vc city-cate--service-item__white_label j-white_label" style="display: none;"><span
+              class="t14">Di chuyển giữa các điểm đến</span> <i class="klook-icon-service-point-to-point"></i></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Hoat dong noi bat-->
+
+  <div class="city--main-block js-hot-activities" data-box="hot_sell" data-role="destination_page_popular_activity" data-klk-role="klk-status-referral">
+      <header class="city--main-block__header flex_justify">
+          Các hoạt động nổi bật 
+          <div class="t14 t_blue js-show-map" data-track-event="Destination Page V2|Map View Clicked On Popular Activities Section" id="viewMapBtn"><span>Xem trên bản đồ</span></div>
+      </header>
+      <div class="popular-swiper-container swiper-container main-swiper-container j_act_list j_popular_list swiper-container-horizontal swiper-container-free-mode">
+          <div class="swiper-wrapper" id="hot_activities">    <div class="swiper-slide swiper-slide-active" data-track-event="Destination Page V2|Popular Activity Section Activity Clicked|" style="margin-right: 12px;">
+<div class="m_radius_box act_block act_block_lg  act_block_fixedheight    ">
+<a href="/vi/activity/117-universal-studios-singapore/?krt=r20&amp;krid=b2724931-e514-4be7-6b61-769b978207c8" class="j_activity_item_link" data-card-tags="{&quot;bestseller&quot;:&quot;Bán chạy &quot;}" data-stat="{&quot;klook_referral_type&quot;:&quot;r20&quot;,&quot;klook_referral_id&quot;:&quot;b2724931-e514-4be7-6b61-769b978207c8&quot;}" data-sold-out="false" data-city-id="6" data-id="117" data-url-seo="universal-studios-singapore" data-template-id="1">
+  <div class="m_bg_img lazy lazy-loaded" data-original="https://res.klook.com/image/upload/fl_lossy.progressive,q_65/c_fill,w_750,h_420/activities/jfmxefuwqi5j6uqrwzrq.jpg" style="background-image: url(&quot;https://res.klook.com/image/upload/fl_lossy.progressive,q_65/c_fill,w_750,h_420/activities/jfmxefuwqi5j6uqrwzrq.jpg&quot;); transform-origin: 0px 0px; opacity: 1; transform: scale(1, 1);">
+      <div class="g_l_box top m_radius_box">
+          <i class="klook-icon-video-v2 t_white t22 g_right"></i>
+      </div>
+      <div class="bottom act_attr">
+
+
+
+      </div>
+  </div>
+  <ul class="m_bg_white g_rel">
+      <li class="title_box">
+          <h3 class="s_title t16">
+              [Klook Độc Quyền] Công Viên Giải Trí Universal Studios Singapore™ (Vé 1 Ngày)
+          </h3>
+      </li>
+      <li class="t12 star_box t_gray t_nowrap">
+              <span>
+                  <span class="m_stars_v2">
+                      <i class="klook-icon-star"></i>
+                  <span class="t14 star_score">4.8</span>
+                  </span>
+                  <span class="u_t_gray_6">(48,263 Đánh giá)</span>
+              </span>|
+
+          <span>999K+  Đã được đặt </span>
+      </li>
+      <li class="price">
+          <div>
+              <p class="t12 t_gray">
+                  <del>₫ 1,349,831</del>
+              </p>
+              <p>
+                  <span class="t16 curr_price"><b>
+                      ₫ 1,202,800
+                                        </b></span>
+                  <i class="t14 klook-icon-fast t_main "></i>
+              </p>
+          </div>
+              <span class="t12 j_card_date t_right notice" data-serverdate="2019-07-23 00:00:00">Có thể đặt ngay hôm nay </span>
+      </li>
+  </ul>
+</a>
+</div>
+
+
+
+
+</div>
+<div class="swiper-slide swiper-slide-next" data-track-event="Destination Page V2|Popular Activity Section Activity Clicked|" style="margin-right: 12px;">
+<div class="m_radius_box act_block act_block_lg  act_block_fixedheight    ">
+<a href="/vi/activity/127-gardens-by-the-bay-singapore/?krt=r20&amp;krid=b2724931-e514-4be7-6b61-769b978207c8" class="j_activity_item_link" data-card-tags="{&quot;bestseller&quot;:&quot;Bán chạy &quot;}" data-stat="{&quot;klook_referral_type&quot;:&quot;r20&quot;,&quot;klook_referral_id&quot;:&quot;b2724931-e514-4be7-6b61-769b978207c8&quot;}" data-sold-out="false" data-city-id="6" data-id="127" data-url-seo="gardens-by-the-bay-singapore" data-template-id="1">
+  <div class="m_bg_img lazy lazy-loaded" data-original="https://res.klook.com/image/upload/fl_lossy.progressive,q_65/c_fill,w_750,h_420/activities/9658ba79-Gardens-by-the-Bay.jpg" style="background-image: url(&quot;https://res.klook.com/image/upload/fl_lossy.progressive,q_65/c_fill,w_750,h_420/activities/9658ba79-Gardens-by-the-Bay.jpg&quot;); transform-origin: 0px 0px; opacity: 1; transform: scale(1, 1);">
+      <div class="g_l_box top m_radius_box">
+          <i class="klook-icon-video-v2 t_white t22 g_right"></i>
+      </div>
+      <div class="bottom act_attr">
+
+
+
+      </div>
+  </div>
+  <ul class="m_bg_white g_rel">
+      <li class="title_box">
+          <h3 class="s_title t16">
+              Vé Gardens by the Bay Singapore
+          </h3>
+      </li>
+      <li class="t12 star_box t_gray t_nowrap">
+              <span>
+                  <span class="m_stars_v2">
+                      <i class="klook-icon-star"></i>
+                  <span class="t14 star_score">4.8</span>
+                  </span>
+                  <span class="u_t_gray_6">(22,615 Đánh giá)</span>
+              </span>|
+
+          <span>602K  Đã được đặt </span>
+      </li>
+      <li class="price">
+          <div>
+              <p class="t12 t_gray">
+                  <del>₫ 478,421</del>
+              </p>
+              <p>
+                  <span class="t16 curr_price"><b>
+                      ₫ 392,989
+                                        </b></span>
+                  <i class="t14 klook-icon-fast t_main "></i>
+              </p>
+          </div>
+              <span class="t12 j_card_date t_right notice" data-serverdate="2019-07-23 00:00:00">Có thể đặt ngay hôm nay </span>
+      </li>
+  </ul>
+</a>
+</div>
+
+
+
+
+</div>
+<div class="swiper-slide" data-track-event="Destination Page V2|Popular Activity Section Activity Clicked|" style="margin-right: 12px;">
+<div class="m_radius_box act_block act_block_lg  act_block_fixedheight    ">
+<a href="/vi/activity/119-sea-aquarium-singapore/?krt=r20&amp;krid=b2724931-e514-4be7-6b61-769b978207c8" class="j_activity_item_link" data-card-tags="{&quot;bestseller&quot;:&quot;Bán chạy &quot;}" data-stat="{&quot;klook_referral_type&quot;:&quot;r20&quot;,&quot;klook_referral_id&quot;:&quot;b2724931-e514-4be7-6b61-769b978207c8&quot;}" data-sold-out="false" data-city-id="6" data-id="119" data-url-seo="sea-aquarium-singapore" data-template-id="1">
+  <div class="m_bg_img lazy lazy-loaded" data-original="https://res.klook.com/image/upload/fl_lossy.progressive,q_65/c_fill,w_750,h_420/activities/a46pqk9u7vmiwww9eyv7.jpg" style="background-image: url(&quot;https://res.klook.com/image/upload/fl_lossy.progressive,q_65/c_fill,w_750,h_420/activities/a46pqk9u7vmiwww9eyv7.jpg&quot;); transform-origin: 0px 0px; opacity: 1; transform: scale(1, 1);">
+      <div class="g_l_box top m_radius_box">
+          <i class="klook-icon-video-v2 t_white t22 g_right"></i>
+      </div>
+      <div class="bottom act_attr">
+
+
+
+      </div>
+  </div>
+  <ul class="m_bg_white g_rel">
+      <li class="title_box">
+          <h3 class="s_title t16">
+              Vé Thủy Cung S.E.A Sentosa, Singapore
+          </h3>
+      </li>
+      <li class="t12 star_box t_gray t_nowrap">
+              <span>
+                  <span class="m_stars_v2">
+                      <i class="klook-icon-star"></i>
+                  <span class="t14 star_score">4.6</span>
+                  </span>
+                  <span class="u_t_gray_6">(14,050 Đánh giá)</span>
+              </span>|
+
+          <span>554K  Đã được đặt </span>
+      </li>
+      <li class="price">
+          <div>
+              <p class="t12 t_gray">
+                  <del>₫ 700,545</del>
+              </p>
+              <p>
+                  <span class="t16 curr_price"><b>
+                      ₫ 567,082
+                                        </b></span>
+                  <i class="t14 klook-icon-fast t_main "></i>
+              </p>
+          </div>
+              <span class="t12 j_card_date t_right notice" data-serverdate="2019-07-23 00:00:00">Có thể đặt ngay hôm nay </span>
+      </li>
+  </ul>
+</a>
+</div>
+
+
+
+
+</div>
+<div class="swiper-slide" data-track-event="Destination Page V2|Popular Activity Section Activity Clicked|" style="margin-right: 12px;">
+<div class="m_radius_box act_block act_block_lg  act_block_fixedheight    ">
+<a href="/vi/activity/141-singapore-zoo-singapore/?krt=r20&amp;krid=b2724931-e514-4be7-6b61-769b978207c8" class="j_activity_item_link" data-card-tags="{&quot;bestseller&quot;:&quot;Bán chạy &quot;}" data-stat="{&quot;klook_referral_type&quot;:&quot;r20&quot;,&quot;klook_referral_id&quot;:&quot;b2724931-e514-4be7-6b61-769b978207c8&quot;}" data-sold-out="false" data-city-id="6" data-id="141" data-url-seo="singapore-zoo-singapore" data-template-id="1">
+  <div class="m_bg_img lazy" data-original="https://res.klook.com/image/upload/fl_lossy.progressive,q_65/c_fill,w_750,h_420/activities/655efeaa-Singapore-Zoo-Ticket-Discounts.jpg" style="display: block;">
+      <div class="g_l_box top m_radius_box">
+          <i class="klook-icon-video-v2 t_white t22 g_right"></i>
+      </div>
+      <div class="bottom act_attr">
+
+
+
+      </div>
+  <i class="klook-bg-logo g_v_c_mid"></i></div>
+  <ul class="m_bg_white g_rel">
+      <li class="title_box">
+          <h3 class="s_title t16">
+              Vé Sở Thú Singapore
+          </h3>
+      </li>
+      <li class="t12 star_box t_gray t_nowrap">
+              <span>
+                  <span class="m_stars_v2">
+                      <i class="klook-icon-star"></i>
+                  <span class="t14 star_score">4.7</span>
+                  </span>
+                  <span class="u_t_gray_6">(8,555 Đánh giá)</span>
+              </span>|
+
+          <span>434K  Đã được đặt </span>
+      </li>
+      <li class="price">
+          <div>
+              <p class="t12 t_gray">
+                  <del>₫ 717,632</del>
+              </p>
+              <p>
+                  <span class="t16 curr_price"><b>
+                      ₫ 478,855
+                                        </b></span>
+                  <i class="t14 klook-icon-fast t_main "></i>
+              </p>
+          </div>
+              <span class="t12 j_card_date t_right notice" data-serverdate="2019-07-23 00:00:00">Có thể đặt ngay hôm nay </span>
+      </li>
+  </ul>
+</a>
+</div>
+
+
+
+
+</div>
+<div class="swiper-slide" data-track-event="Destination Page V2|Popular Activity Section Activity Clicked|" style="margin-right: 12px;">
+<div class="m_radius_box act_block act_block_lg  act_block_fixedheight    ">
+<a href="/vi/activity/132-skyline-luge-singapore/?krt=r20&amp;krid=b2724931-e514-4be7-6b61-769b978207c8" class="j_activity_item_link" data-card-tags="{&quot;bestseller&quot;:&quot;Bán chạy &quot;}" data-stat="{&quot;klook_referral_type&quot;:&quot;r20&quot;,&quot;klook_referral_id&quot;:&quot;b2724931-e514-4be7-6b61-769b978207c8&quot;}" data-sold-out="false" data-city-id="6" data-id="132" data-url-seo="skyline-luge-singapore" data-template-id="1">
+  <div class="m_bg_img lazy" data-original="https://res.klook.com/image/upload/fl_lossy.progressive,q_65/c_fill,w_750,h_420/activities/eee00d09-Skyline-Luge.jpg" style="display: block;">
+      <div class="g_l_box top m_radius_box">
+          <i class="klook-icon-video-v2 t_white t22 g_right"></i>
+      </div>
+      <div class="bottom act_attr">
+
+
+
+      </div>
+  <i class="klook-bg-logo g_v_c_mid"></i></div>
+  <ul class="m_bg_white g_rel">
+      <li class="title_box">
+          <h3 class="s_title t16">
+              Xe Trượt Skyline Luge tại Sentosa
+          </h3>
+      </li>
+      <li class="t12 star_box t_gray t_nowrap">
+              <span>
+                  <span class="m_stars_v2">
+                      <i class="klook-icon-star"></i>
+                  <span class="t14 star_score">4.8</span>
+                  </span>
+                  <span class="u_t_gray_6">(14,200 Đánh giá)</span>
+              </span>|
+
+          <span>338K  Đã được đặt </span>
+      </li>
+      <li class="price">
+          <div>
+              <p class="t12 t_gray">
+                  <del>₫ 410,075</del>
+              </p>
+              <p>
+                  <span class="t16 curr_price"><b>
+                      ₫ 255,350
+                                        </b></span>
+                  <i class="t14 klook-icon-fast t_main "></i>
+              </p>
+          </div>
+              <span class="t12 j_card_date t_right notice" data-serverdate="2019-07-23 00:00:00">Có thể đặt ngay hôm nay </span>
+      </li>
+  </ul>
+</a>
+</div>
+
+
+
+
+</div>
+<div class="swiper-slide" data-track-event="Destination Page V2|Popular Activity Section Activity Clicked|" style="margin-right: 12px;">
+<div class="m_radius_box act_block act_block_lg  act_block_fixedheight    ">
+<a href="/vi/activity/133-legoland-in-johor-bahru-admission-ticket-singapore/?krt=r20&amp;krid=b2724931-e514-4be7-6b61-769b978207c8" class="j_activity_item_link" data-card-tags="{&quot;bestseller&quot;:&quot;Bán chạy &quot;}" data-stat="{&quot;klook_referral_type&quot;:&quot;r20&quot;,&quot;klook_referral_id&quot;:&quot;b2724931-e514-4be7-6b61-769b978207c8&quot;}" data-sold-out="false" data-city-id="6" data-id="133" data-url-seo="legoland-in-johor-bahru-admission-ticket-singapore" data-template-id="1">
+  <div class="m_bg_img lazy" data-original="https://res.klook.com/image/upload/fl_lossy.progressive,q_65/c_fill,w_750,h_420/activities/wzvso2h9jepvpm11yqap.jpg" style="display: block;">
+      <div class="g_l_box top m_radius_box">
+          <i class="klook-icon-video-v2 t_white t22 g_right"></i>
+      </div>
+      <div class="bottom act_attr">
+
+
+
+      </div>
+  <i class="klook-bg-logo g_v_c_mid"></i></div>
+  <ul class="m_bg_white g_rel">
+      <li class="title_box">
+          <h3 class="s_title t16">
+              Vé Legoland Malaysia ở Johor Bahru
+          </h3>
+      </li>
+      <li class="t12 star_box t_gray t_nowrap">
+              <span>
+                  <span class="m_stars_v2">
+                      <i class="klook-icon-star"></i>
+                  <span class="t14 star_score">4.6</span>
+                  </span>
+                  <span class="u_t_gray_6">(5,594 Đánh giá)</span>
+              </span>|
+
+          <span>268K  Đã được đặt </span>
+      </li>
+      <li class="price">
+          <div>
+              <p class="t12 t_gray">
+                  <del>₫ 536,981</del>
+              </p>
+              <p>
+                  <span class="t16 curr_price"><b>
+                      ₫ 407,488
+                                        </b></span>
+                  <i class="t14 klook-icon-fast t_main "></i>
+              </p>
+          </div>
+              <span class="t12 j_card_date t_right notice" data-serverdate="2019-07-23 00:00:00">Có thể đặt ngay hôm nay </span>
+      </li>
+  </ul>
+</a>
+</div>
+
+
+
+
+</div>
+<div class="swiper-slide" data-track-event="Destination Page V2|Popular Activity Section Activity Clicked|" style="margin-right: 12px;">
+<div class="m_radius_box act_block act_block_lg  act_block_fixedheight    ">
+<a href="/vi/activity/130-faber-peak-cable-car-singapore/?krt=r20&amp;krid=b2724931-e514-4be7-6b61-769b978207c8" class="j_activity_item_link" data-card-tags="{&quot;bestseller&quot;:&quot;Bán chạy &quot;}" data-stat="{&quot;klook_referral_type&quot;:&quot;r20&quot;,&quot;klook_referral_id&quot;:&quot;b2724931-e514-4be7-6b61-769b978207c8&quot;}" data-sold-out="false" data-city-id="6" data-id="130" data-url-seo="faber-peak-cable-car-singapore" data-template-id="1">
+  <div class="m_bg_img lazy" data-original="https://res.klook.com/image/upload/fl_lossy.progressive,q_65/c_fill,w_750,h_420/activities/30870e7d-Singapore-Cable-Car-Skypass.jpg" style="display: block;">
+      <div class="g_l_box top m_radius_box">
+          <i class="klook-icon-video-v2 t_white t22 g_right"></i>
+      </div>
+      <div class="bottom act_attr">
+
+
+
+      </div>
+  <i class="klook-bg-logo g_v_c_mid"></i></div>
+  <ul class="m_bg_white g_rel">
+      <li class="title_box">
+          <h3 class="s_title t16">
+              Vé Cáp Treo Skypass Singapore
+          </h3>
+      </li>
+      <li class="t12 star_box t_gray t_nowrap">
+              <span>
+                  <span class="m_stars_v2">
+                      <i class="klook-icon-star"></i>
+                  <span class="t14 star_score">4.7</span>
+                  </span>
+                  <span class="u_t_gray_6">(9,624 Đánh giá)</span>
+              </span>|
+
+          <span>268K  Đã được đặt </span>
+      </li>
+      <li class="price">
+          <div>
+              <p class="t12 t_gray">
+                  <del>₫ 598,027</del>
+              </p>
+              <p>
+                  <span class="t16 curr_price"><b>
+                      ₫ 291,000
+                                        </b></span>
+                  <i class="t14 klook-icon-fast t_main "></i>
+              </p>
+          </div>
+              <span class="t12 j_card_date t_right notice" data-serverdate="2019-07-23 00:00:00">Có thể đặt ngay hôm nay </span>
+      </li>
+  </ul>
+</a>
+</div>
+
+
+
+
+</div>
+<div class="swiper-slide" data-track-event="Destination Page V2|Popular Activity Section Activity Clicked|" style="margin-right: 12px;">
+<div class="m_radius_box act_block act_block_lg  act_block_fixedheight    ">
+<a href="/vi/activity/122-singapore-night-safari-singapore/?krt=r20&amp;krid=b2724931-e514-4be7-6b61-769b978207c8" class="j_activity_item_link" data-card-tags="{&quot;bestseller&quot;:&quot;Bán chạy &quot;}" data-stat="{&quot;klook_referral_type&quot;:&quot;r20&quot;,&quot;klook_referral_id&quot;:&quot;b2724931-e514-4be7-6b61-769b978207c8&quot;}" data-sold-out="false" data-city-id="6" data-id="122" data-url-seo="singapore-night-safari-singapore" data-template-id="1">
+  <div class="m_bg_img lazy" data-original="https://res.klook.com/image/upload/fl_lossy.progressive,q_65/c_fill,w_750,h_420/activities/778c4391-Singapore-Night-Safari.jpg" style="display: block;">
+      <div class="g_l_box top m_radius_box">
+          <i class="klook-icon-video-v2 t_white t22 g_right"></i>
+      </div>
+      <div class="bottom act_attr">
+
+
+
+      </div>
+  <i class="klook-bg-logo g_v_c_mid"></i></div>
+  <ul class="m_bg_white g_rel">
+      <li class="title_box">
+          <h3 class="s_title t16">
+              Vé Vườn Thú Đêm Night Safari Singapore
+          </h3>
+      </li>
+      <li class="t12 star_box t_gray t_nowrap">
+              <span>
+                  <span class="m_stars_v2">
+                      <i class="klook-icon-star"></i>
+                  <span class="t14 star_score">4.4</span>
+                  </span>
+                  <span class="u_t_gray_6">(5,788 Đánh giá)</span>
+              </span>|
+
+          <span>179K  Đã được đặt </span>
+      </li>
+      <li class="price">
+          <div>
+              <p class="t12 t_gray">
+                  <del>₫ 837,237</del>
+              </p>
+              <p>
+                  <span class="t16 curr_price"><b>
+                      ₫ 590,000
+                                        </b></span>
+              </p>
+          </div>
+              <span class="t12 j_card_date t_right" data-serverdate="2019-07-25 00:00:00">Có thể đặt từ ngày 25/7/2019</span>
+      </li>
+  </ul>
+</a>
+</div>
+
+
+
+
+</div>
+<div class="swiper-slide" data-track-event="Destination Page V2|Popular Activity Section Activity Clicked|" style="margin-right: 12px;">
+<div class="m_radius_box act_block act_block_lg  act_block_fixedheight    ">
+<a href="/vi/activity/124-singapore-river-safari-singapore/?krt=r20&amp;krid=b2724931-e514-4be7-6b61-769b978207c8" class="j_activity_item_link" data-card-tags="{&quot;bestseller&quot;:&quot;Bán chạy &quot;}" data-stat="{&quot;klook_referral_type&quot;:&quot;r20&quot;,&quot;klook_referral_id&quot;:&quot;b2724931-e514-4be7-6b61-769b978207c8&quot;}" data-sold-out="false" data-city-id="6" data-id="124" data-url-seo="singapore-river-safari-singapore" data-template-id="1">
+  <div class="m_bg_img lazy" data-original="https://res.klook.com/image/upload/fl_lossy.progressive,q_65/c_fill,w_750,h_420/activities/1944ba85-Singapore-River-Safari.jpg" style="display: block;">
+      <div class="g_l_box top m_radius_box">
+          <i class="klook-icon-video-v2 t_white t22 g_right"></i>
+      </div>
+      <div class="bottom act_attr">
+
+
+
+      </div>
+  <i class="klook-bg-logo g_v_c_mid"></i></div>
+  <ul class="m_bg_white g_rel">
+      <li class="title_box">
+          <h3 class="s_title t16">
+              Vé Tham Quan River Safari Singapore
+          </h3>
+      </li>
+      <li class="t12 star_box t_gray t_nowrap">
+              <span>
+                  <span class="m_stars_v2">
+                      <i class="klook-icon-star"></i>
+                  <span class="t14 star_score">4.5</span>
+                  </span>
+                  <span class="u_t_gray_6">(3,962 Đánh giá)</span>
+              </span>|
+
+          <span>175K  Đã được đặt </span>
+      </li>
+      <li class="price">
+          <div>
+              <p class="t12 t_gray">
+                  <del>₫ 666,372</del>
+              </p>
+              <p>
+                  <span class="t16 curr_price"><b>
+                      ₫ 338,936
+                                        </b></span>
+                  <i class="t14 klook-icon-fast t_main "></i>
+              </p>
+          </div>
+              <span class="t12 j_card_date t_right notice" data-serverdate="2019-07-23 00:00:00">Có thể đặt ngay hôm nay </span>
+      </li>
+  </ul>
+</a>
+</div>
+
+
+
+
+</div>
+<div class="swiper-slide" data-track-event="Destination Page V2|Popular Activity Section Activity Clicked|" style="margin-right: 12px;">
+<div class="m_radius_box act_block act_block_lg  act_block_fixedheight    ">
+<a href="/vi/activity/3928-singapore-night-safari-singapore/?krt=r20&amp;krid=b2724931-e514-4be7-6b61-769b978207c8" class="j_activity_item_link" data-card-tags="{&quot;bestseller&quot;:&quot;Bán chạy &quot;}" data-stat="{&quot;klook_referral_type&quot;:&quot;r20&quot;,&quot;klook_referral_id&quot;:&quot;b2724931-e514-4be7-6b61-769b978207c8&quot;}" data-sold-out="false" data-city-id="6" data-id="3928" data-url-seo="singapore-night-safari-singapore" data-template-id="1">
+  <div class="m_bg_img lazy" data-original="https://res.klook.com/image/upload/fl_lossy.progressive,q_65/c_fill,w_750,h_420/activities/778c4391-Singapore-Night-Safari.jpg" style="display: block;">
+      <div class="g_l_box top m_radius_box">
+          <i class="klook-icon-video-v2 t_white t22 g_right"></i>
+      </div>
+      <div class="bottom act_attr">
+
+
+
+      </div>
+  <i class="klook-bg-logo g_v_c_mid"></i></div>
+  <ul class="m_bg_white g_rel">
+      <li class="title_box">
+          <h3 class="s_title t16">
+              Vé Mở Tham Quan Singapore Night Safari 
+          </h3>
+      </li>
+      <li class="t12 star_box t_gray t_nowrap">
+              <span>
+                  <span class="m_stars_v2">
+                      <i class="klook-icon-star"></i>
+                  <span class="t14 star_score">4.4</span>
+                  </span>
+                  <span class="u_t_gray_6">(2,888 Đánh giá)</span>
+              </span>|
+
+          <span>174K  Đã được đặt </span>
+      </li>
+      <li class="price">
+          <div>
+              <p class="t12 t_gray">
+                  <del>₫ 837,237</del>
+              </p>
+              <p>
+                  <span class="t16 curr_price"><b>
+                      ₫ 589,800
+                                        </b></span>
+                  <i class="t14 klook-icon-fast t_main "></i>
+              </p>
+          </div>
+              <span class="t12 j_card_date t_right notice" data-serverdate="2019-07-23 00:00:00">Có thể đặt ngay hôm nay </span>
+      </li>
+  </ul>
+</a>
+</div>
+
+
+
+
+</div>
+</div>
+      </div>
+  </div>
+</ion-content>

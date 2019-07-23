@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavControllerService } from 'src/app/services';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePage implements OnInit {
 
-  constructor() { }
+  constructor(
+    private navCrl: NavControllerService
+  ) { }
 
   ngOnInit() {
   }
 
+  place_onClick() {
+    this.navCrl.push('tabs/home/home-detail');
+  }
 }
