@@ -2,7 +2,10 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', loadChildren: './tabs/tabs.module#TabsPageModule' }
+  { path: '', loadChildren: './pages/tabs/tabs.module#TabsPageModule' },
+  // { path: 'home', loadChildren: './pages/home/home.module#HomePageModule' },
+  // { path: 'booking', loadChildren: './pages/booking/booking.module#BookingPageModule' },
+  // { path: 'user', loadChildren: './pages/user/user.module#UserPageModule' }
 ];
 @NgModule({
   imports: [
@@ -10,4 +13,4 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
