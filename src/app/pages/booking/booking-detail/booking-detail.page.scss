@@ -1,0 +1,1939 @@
+
+.booking-details-page {
+    // padding-top: 48px;
+  }
+  .booking-details-page .booking-num-date {
+      position: fixed;
+      top: 48px;
+      width: 100%;
+      height: 48px;
+      padding-top: 8px;
+      background-color: #fff;
+      box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.12);
+      z-index: 7;
+  }
+  .booking-details-page .header_placeholder {
+      height: 48px;
+      margin-top: -48px;
+  }
+  .booking-details-page .process-box {
+      padding: 16px 0;
+      box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.12);
+  }
+  .booking-details-page .process-box .step {
+        padding: 8px 16px 8px 16px;
+  }
+  .booking-details-page .process-box .step:not(.canceled)::before {
+          content: '';
+          width: 1px;
+          height: 100%;
+          background-color: #e0e0e0;
+          position: absolute;
+          top: 9px;
+          left: 27px;
+  }
+  .booking-details-page .process-box .step:not(.canceled):last-of-type::before {
+          display: none;
+  }
+  .booking-details-page .process-box .step.canceled .step-desc span {
+          color: rgba(0, 0, 0, 0.54);
+  }
+  .booking-details-page .process-box .step.none .step-desc .step-name {
+          color: rgba(0, 0, 0, 0.38);
+  }
+  .booking-details-page .process-box .step .step-icon {
+          margin-right: 16px;
+          width: 24px;
+          height: 24px;
+          -ms-flex-negative: 0;
+              flex-shrink: 0;
+          border-radius: 50%;
+          background-color: #e0e0e0;
+  }
+  .booking-details-page .process-box .step .step-icon svg {
+            top: 0;
+            left: 0;
+            background-color: #fff;
+  }
+  .booking-details-page .process-box .step .step-desc {
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column;
+  }
+  .booking-details-page .process-box .step .step-desc > * {
+            margin-bottom: 4px;
+  }
+  .booking-details-page .process-box .step .step-desc > *:first-child {
+              margin-top: 4px;
+  }
+  .booking-details-page .process-box .step .step-desc > *:last-child {
+              margin-bottom: 0;
+  }
+  .booking-details-page .process-box .step .step-desc .step-name {
+            color: rgba(0, 0, 0, 0.87);
+  }
+  .booking-details-page .process-box .step .step-desc .confirm-date {
+            color: rgba(0, 0, 0, 0.38);
+  }
+  .booking-details-page .process-box .step .step-desc .confirming-text {
+            color: rgba(0, 0, 0, 0.54);
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+  }
+  .booking-details-page .process-box .step .step-desc .special-tips-box {
+            padding: 20px 16px;
+            padding-left: 13px;
+            background-color: #F5F5F5;
+            margin-top: 8px;
+            margin-right: 16px;
+            border-radius: 2px;
+  }
+  .booking-details-page .process-box .step .step-desc .special-tips-box::before {
+              content: '';
+              position: absolute;
+              width: 18px;
+              height: 18px;
+              background-color: #F5F5F5;
+              -webkit-transform: rotate(45deg);
+                      transform: rotate(45deg);
+              top: 11px;
+              left: -7px;
+  }
+  .booking-details-page .process-box .step .step-desc .special-tips-box .special-icon {
+              width: 24px;
+              margin-right: 16px;
+  }
+  .booking-details-page .process-box .step .step-desc .special-tips-box .special-icon svg {
+                margin-top: -4px;
+  }
+  .booking-details-page .process-box .step .step-desc .special-tips-box .special-icon svg.security {
+                  font-size: 32px;
+                  margin-top: -7px;
+  }
+  .booking-details-page .process-box .step .step-desc .special-tips-box .special-tips > p {
+              margin-bottom: 4px;
+  }
+  .booking-details-page .process-box .step .step-desc .special-tips-box .special-tips > span {
+              color: rgba(0, 0, 0, 0.54);
+  }
+  .booking-details-page .process-box .step .step-desc .special-tips-box .special-tips .fraud_link {
+              margin-top: 16px;
+  }
+  .booking-details-page .process-box .step .step-desc .special-tips-box .special-tips .fraud_link .confirm {
+                border-color: rgba(0, 0, 0, 0.24);
+                color: rgba(0, 0, 0, 0.24);
+  }
+  .booking-details-page .price-box {
+      padding: 0 16px;
+      padding-bottom: 24px;
+  }
+  .booking-details-page .price-box .discount-desc, .booking-details-page .price-box .total-price {
+        padding: 16px 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  }
+  .booking-details-page .price-box .discount-desc > div, .booking-details-page .price-box .total-price > div {
+          font-size: 12px;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: justify;
+              -ms-flex-pack: justify;
+                  justify-content: space-between;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          color: rgba(0, 0, 0, 0.54);
+          margin-bottom: 4px;
+  }
+  .booking-details-page .price-box .discount-desc > div:last-child, .booking-details-page .price-box .total-price > div:last-child {
+            margin-bottom: 0;
+  }
+  .booking-details-page .price-box .discount-desc > div.coupon-info > div span, .booking-details-page .price-box .total-price > div.coupon-info > div span {
+            margin-right: 8px;
+  }
+  .booking-details-page .price-box .discount-desc > div.coupon-info > div svg, .booking-details-page .price-box .total-price > div.coupon-info > div svg {
+            padding: 4px;
+  }
+  .booking-details-page .price-box .discount-desc > div > div:first-child, .booking-details-page .price-box .total-price > div > div:first-child {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+  }
+  .booking-details-page .price-box .discount-desc > div > div:last-child, .booking-details-page .price-box .total-price > div > div:last-child {
+            margin-left: 16px;
+  }
+  .booking-details-page .price-box .total-price {
+        padding-bottom: 0;
+        border-bottom: none;
+  }
+  .booking-details-page .price-box .total-price .grand-total {
+          font-size: 14px;
+  }
+  .booking-details-page .price-box .total-price .actual-payment {
+          font-size: 16px;
+          color: rgba(0, 0, 0, 0.87);
+  }
+  .booking-details-page .price-box .total-price .actual-payment > span:last-child {
+            font-weight: 600;
+  }
+  .booking-details-page .price-box .total-price .pay_amount_info {
+          margin-top: 13px;
+          border: solid 1px #eeeeee;
+          background-color: #fff;
+          position: relative;
+          padding: 12px;
+          display: block;
+          margin-bottom: 10px;
+  }
+  .booking-details-page .price-box .total-price .pay_amount_info:before {
+            content: '';
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background-color: #fff;
+            position: absolute;
+            right: 10px;
+            top: -7px;
+            border-top: 1px solid #eeeeee;
+            border-right: 1px solid #eeeeee;
+            -webkit-transform: rotate(-45deg);
+                    transform: rotate(-45deg);
+  }
+  .booking-details-page .price-box .total-price .pay_amount_info p {
+            display: block;
+            margin-right: 0;
+            line-height: 1.5;
+  }
+  .booking-details-page .price-box .total-price .pay_amount_info p span:first-child {
+              margin-right: 20px;
+              color: rgba(0, 0, 0, 0.54);
+  }
+  .booking-details-page .price-box .total-price .pay_amount_info p span:last-child {
+              color: black;
+  }
+  .booking-details-page .price-box .total-price .pay_amount_info p:first-child {
+              margin-bottom: 8px;
+  }
+  .booking-details-page .price-box .total-price .pay_amount_info p.userChange {
+              color: rgba(0, 0, 0, 0.38);
+              margin-top: 4px;
+  }
+  .booking-details-page .price-box .total-price .view-receipt {
+          margin-top: 16px;
+          -webkit-box-pack: end;
+              -ms-flex-pack: end;
+                  justify-content: flex-end;
+  }
+  .booking-details-page .price-box .total-price .dragonpay {
+          position: fixed;
+          z-index: 3;
+          bottom: 0;
+          left: 0;
+          width: 100vw;
+          padding: 8px;
+          background-color: #fff;
+          box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.12);
+          padding-bottom: env(safe-area-inset-bottom);
+  }
+  .booking-details-page .price-box .total-price .dragonpay a {
+            display: block;
+            width: 100%;
+            background-color: #ff5722;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 44px;
+            text-align: center;
+  }
+  .booking-details-page .expire-refund-box {
+      padding-left: 16px;
+      border-top: 1px solid rgba(0, 0, 0, 0.12);
+  }
+  .booking-details-page .expire-refund-box > div:not(:last-child) {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  }
+  .booking-details-page .expire-refund-box .title {
+        box-sizing: border-box;
+        padding: 28px 0 12px;
+        color: rgba(0, 0, 0, 0.54);
+  }
+  .booking-details-page .expire-refund-box .refund-credits, .booking-details-page .expire-refund-box .refund-coupon {
+        height: 48px;
+        padding-right: 16px;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+  }
+  .booking-details-page .expire-refund-box .refund-credits .amount-price, .booking-details-page .expire-refund-box .refund-coupon .amount-price {
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column;
+          -webkit-box-align: end;
+              -ms-flex-align: end;
+                  align-items: flex-end;
+  }
+  .booking-details-page .expire-refund-box .refund-credits .price, .booking-details-page .expire-refund-box .refund-coupon .price {
+          color: rgba(0, 0, 0, 0.54);
+  }
+  .booking-details-page .ticket-box section {
+      margin: 8px 16px 16px;
+      background-color: #fff;
+      padding: 24px 16px;
+  }
+  .booking-details-page .ticket-box section.canceled .ticket-top {
+        color: rgba(0, 0, 0, 0.24);
+  }
+  .booking-details-page .ticket-box section.canceled .ticket-top .img-box::after {
+          display: block;
+  }
+  .booking-details-page .ticket-box section.canceled .ticket-mid .pkg-name, .booking-details-page .ticket-box section.canceled .ticket-mid .pkg-amount {
+        color: rgba(0, 0, 0, 0.38);
+  }
+  .booking-details-page .ticket-box section.canceled .ticket-rail {
+        position: relative;
+  }
+  .booking-details-page .ticket-box section.canceled .ticket-rail:before {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          background-color: rgba(255, 255, 255, 0.6);
+          z-index: 1;
+  }
+  .booking-details-page .ticket-box section .ticket-top {
+        color: rgba(0, 0, 0, 0.87);
+  }
+  .booking-details-page .ticket-box section .ticket-top .ticket-title {
+          font-size: 16px;
+          line-height: 19px;
+          font-weight: 600;
+          margin-bottom: 8px;
+  }
+  .booking-details-page .ticket-box section .ticket-top .img-box {
+          -ms-flex-negative: 0;
+              flex-shrink: 0;
+          width: 64px;
+          height: 64px;
+          margin-left: 16px;
+          background-color: #e0e0e0;
+          background-size: cover;
+          border-radius: 2px;
+  }
+  .booking-details-page .ticket-box section .ticket-top .img-box::after {
+            display: none;
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: #fff;
+            opacity: 0.7;
+  }
+  .booking-details-page .ticket-box section .payment-detail-text {
+        color: #00699e;
+        margin-bottom: 16px;
+        margin-top: 4px;
+  }
+  .booking-details-page .ticket-box section .ticket-mid {
+        border-radius: 2px;
+        border: solid 1px rgba(0, 0, 0, 0.24);
+        padding-top: 16px;
+        padding-bottom: 16px;
+  }
+  .booking-details-page .ticket-box section .ticket-mid .pkg-name, .booking-details-page .ticket-box section .ticket-mid div.pkg-amount, .booking-details-page .ticket-box section .ticket-mid div.ticket-status, .booking-details-page .ticket-box section .ticket-mid .viewMoreWifi, .booking-details-page .ticket-box section .ticket-mid .addOn {
+          padding-left: 16px;
+          padding-right: 16px;
+  }
+  .booking-details-page .ticket-box section .ticket-mid .pkg-name {
+          margin-bottom: 12px;
+  }
+  .booking-details-page .ticket-box section .ticket-mid .pkg-name.wifi-pkg {
+            margin-bottom: 8px;
+  }
+  .booking-details-page .ticket-box section .ticket-mid .current-booking {
+          padding-left: 16px;
+          margin-bottom: 8px;
+          font-size: 14px;
+  }
+  .booking-details-page .ticket-box section .ticket-mid div.pkg-amount {
+          margin-bottom: 4px;
+  }
+  .booking-details-page .ticket-box section .ticket-mid div.pkg-amount:last-of-type {
+            margin-bottom: 8px;
+  }
+  .booking-details-page .ticket-box section .ticket-mid div.pkg-amount:last-child {
+            margin-bottom: 0;
+  }
+  .booking-details-page .ticket-box section .ticket-mid div.pkg-amount > span:last-child {
+            white-space: nowrap;
+            -ms-flex-item-align: start;
+                align-self: flex-start;
+  }
+  .booking-details-page .ticket-box section .ticket-mid div.addOn {
+          margin-top: 16px;
+          margin-bottom: 16px;
+          border-top: 1px solid #e0e0e0;
+          border-bottom: 1px solid #e0e0e0;
+          padding-top: 16px;
+          padding-bottom: 16px;
+  }
+  .booking-details-page .ticket-box section .ticket-mid div.addOn .addOnTitle {
+            color: rgba(0, 0, 0, 0.38);
+  }
+  .booking-details-page .ticket-box section .ticket-mid div.addOn .addOnList {
+            margin-top: 8px;
+  }
+  .booking-details-page .ticket-box section .ticket-mid div.addOn .addOnList .addOnPkg {
+              margin-bottom: 8px;
+  }
+  .booking-details-page .ticket-box section .ticket-mid div.addOn .addOnList .pkg-amount {
+              padding-left: 0;
+              padding-right: 0;
+  }
+  .booking-details-page .ticket-box section .ticket-mid div.ticket-status > div {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column;
+          -webkit-box-pack: justify;
+              -ms-flex-pack: justify;
+                  justify-content: space-between;
+          margin-top: 8px;
+  }
+  .booking-details-page .ticket-box section .ticket-mid div.ticket-status > div > span:first-of-type {
+            font-weight: 600;
+  }
+  .booking-details-page .ticket-box section .ticket-mid div.ticket-status > div.processing > span:first-of-type {
+            margin-bottom: 8px;
+  }
+  .booking-details-page .ticket-box section .ticket-mid div.ticket-status > div.confirmed .onway_text {
+            margin-top: 8px;
+  }
+  .booking-details-page .ticket-box section .ticket-mid div.ticket-status > div.confirmed .trans_btn {
+            height: 28px;
+            margin-top: 8px;
+            display: -webkit-inline-box;
+            display: -ms-inline-flexbox;
+            display: inline-flex;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            padding: 0 12px;
+  }
+  .booking-details-page .ticket-box section .ticket-mid div.ticket-status > div.canceled {
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+  }
+  .booking-details-page .ticket-box section .ticket-mid .viewMoreWifi {
+          font-size: 14px;
+          color: #00699e;
+          margin-bottom: 8px;
+          display: inline-block;
+  }
+  .booking-details-page .ticket-box section .ticket-mid .partial-refund {
+          margin-top: 16px;
+          padding: 16px;
+          padding-bottom: 0;
+          border-top: solid 1px rgba(0, 0, 0, 0.12);
+          position: relative;
+  }
+  .booking-details-page .ticket-box section .ticket-mid .partial-refund p {
+            margin-bottom: 8px;
+  }
+  .booking-details-page .ticket-box section .ticket-mid .partial-refund .trans_btn {
+            height: 28px;
+            display: -webkit-inline-box;
+            display: -ms-inline-flexbox;
+            display: inline-flex;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            padding: 0 12px;
+  }
+  .booking-details-page .ticket-box section .ticket-mid .partial-refund__unit {
+            margin-bottom: 8px;
+  }
+  .booking-details-page .ticket-box section .ticket-mid .refund-details-text {
+          color: rgba(0, 105, 158, 0.87);
+  }
+  .booking-details-page .ticket-box section .rail-change {
+        margin-bottom: 20px;
+  }
+  .booking-details-page .ticket-box section .rail-change div {
+          padding: 16px;
+          font-size: 14px;
+          color: rgba(0, 0, 0, 0.87);
+          background-color: #fef7d4;
+  }
+  .booking-details-page .ticket-box section .ticket-rail {
+        border-radius: 2px;
+        border: solid 1px rgba(0, 0, 0, 0.24);
+  }
+  .booking-details-page .ticket-box section .ticket-rail div.rail_info .forward .rail-title, .booking-details-page .ticket-box section .ticket-rail div.rail_info .return .rail-title {
+          padding: 8px 16px 8px 16px;
+          background-color: #fff;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: justify;
+              -ms-flex-pack: justify;
+                  justify-content: space-between;
+          font-size: 14px;
+          color: rgba(0, 0, 0, 0.87);
+          border-bottom: 1px solid #dedede;
+  }
+  .booking-details-page .ticket-box section .ticket-rail div.rail_info .forward .rail-title .line-detail, .booking-details-page .ticket-box section .ticket-rail div.rail_info .return .rail-title .line-detail {
+            color: #007dae;
+            cursor: pointer;
+            z-index: 3;
+  }
+  .booking-details-page .ticket-box section .ticket-rail div.rail_info .forward .rail .er_train_card, .booking-details-page .ticket-box section .ticket-rail div.rail_info .return .rail .er_train_card {
+          background-color: #fafafa;
+  }
+  .booking-details-page .ticket-box section .ticket-rail div.rail_info .return .rail-title {
+          border-top: 1px solid #dedede;
+  }
+  .booking-details-page .ticket-box section .ticket-rail div.ticket-status {
+          padding: 8px 16px 16px 16px;
+          border-top: 1px solid #dedede;
+  }
+  .booking-details-page .ticket-box section .ticket-rail div.ticket-status > div {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+  }
+  .booking-details-page .ticket-box section .ticket-rail div.ticket-status > div > span:first-of-type {
+              font-weight: 600;
+  }
+  .booking-details-page .ticket-box section .ticket-rail div.ticket-status > div.processing > span:first-of-type {
+              margin-bottom: 8px;
+  }
+  .booking-details-page .ticket-box section .ticket-rail div.ticket-status > div.confirmed .onway_text {
+              margin-top: 8px;
+  }
+  .booking-details-page .ticket-box section .ticket-rail div.ticket-status > div.confirmed .trans_btn {
+              margin-top: 8px;
+  }
+  .booking-details-page .ticket-box section .get-ticket {
+        margin-top: 16px;
+        border-radius: 2px;
+        border: solid 1px rgba(0, 0, 0, 0.24);
+  }
+  .booking-details-page .ticket-box section .get-ticket .print, .booking-details-page .ticket-box section .get-ticket .ticket-station {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column;
+          padding: 16px;
+  }
+  .booking-details-page .ticket-box section .get-ticket .print > p, .booking-details-page .ticket-box section .get-ticket .ticket-station > p {
+            font-size: 12px;
+            color: rgba(0, 0, 0, 0.38);
+            margin-bottom: 3px;
+  }
+  .booking-details-page .ticket-box section .get-ticket .print > div, .booking-details-page .ticket-box section .get-ticket .ticket-station > div {
+            font-size: 14px;
+            font-weight: 600;
+            color: rgba(0, 0, 0, 0.87);
+  }
+  .booking-details-page .ticket-box section .get-ticket .print > div span, .booking-details-page .ticket-box section .get-ticket .print > div i, .booking-details-page .ticket-box section .get-ticket .ticket-station > div span, .booking-details-page .ticket-box section .get-ticket .ticket-station > div i {
+              vertical-align: middle;
+  }
+  .booking-details-page .ticket-box section .get-ticket .print > div i, .booking-details-page .ticket-box section .get-ticket .ticket-station > div i {
+              color: rgba(0, 0, 0, 0.54);
+  }
+  .booking-details-page .ticket-box section .get-ticket .ticket-station {
+          background-color: #fafafa;
+          border-top: 1px solid #dedede;
+  }
+  .booking-details-page .ticket-box section .get-ticket .mailing .number {
+          font-weight: normal;
+          margin-top: 3px;
+          margin-bottom: 8px;
+  }
+  .booking-details-page .ticket-box section .get-ticket .mailing .address {
+          font-weight: normal;
+          color: rgba(0, 0, 0, 0.38);
+  }
+  .booking-details-page .ticket-box section .get-ticket.canceled .print {
+          position: relative;
+  }
+  .booking-details-page .ticket-box section .get-ticket.canceled .print:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: rgba(255, 255, 255, 0.6);
+            z-index: 1;
+  }
+  .booking-details-page .ticket-box section .get-ticket.canceled .ticket-station div {
+          color: rgba(0, 0, 0, 0.38);
+  }
+  .booking-details-page .ticket-box section .ticket-bottom .refund-info {
+        padding-top: 18px;
+        color: rgba(0, 0, 0, 0.54);
+  }
+  .booking-details-page .ticket-box section .ticket-bottom .refund-info .refund-icon {
+          margin-left: 10px;
+  }
+  .booking-details-page .ticket-box section .ticket-bottom .ticket-process-box {
+        padding: 24px 0;
+  }
+  .booking-details-page .ticket-box section .ticket-bottom .ticket-process-box li {
+          width: calc((100% - 16px) / 3);
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
+  }
+  .booking-details-page .ticket-box section .ticket-bottom .ticket-process-box li::before {
+            top: 12px;
+            left: 50%;
+            content: '';
+            width: 100%;
+            height: 1px;
+            position: absolute;
+            background-color: #e0e0e0;
+  }
+  .booking-details-page .ticket-box section .ticket-bottom .ticket-process-box li:last-of-type::before {
+            display: none;
+  }
+  .booking-details-page .ticket-box section .ticket-bottom .ticket-process-box li .step-icon {
+            margin-bottom: 8px;
+            width: 24px;
+            height: 24px;
+            background-color: #e0e0e0;
+            border-radius: 50%;
+  }
+  .booking-details-page .ticket-box section .ticket-bottom .ticket-process-box li .step-icon svg {
+              background-color: #fff;
+  }
+  .booking-details-page .ticket-box section .ticket-bottom .ticket-process-box li span {
+            margin-top: 4px;
+  }
+  .booking-details-page .ticket-box section .ticket-bottom .ticket-process-box li .step-name {
+            text-align: center;
+            color: rgba(0, 0, 0, 0.87);
+  }
+  .booking-details-page .ticket-box section .ticket-bottom .ticket-process-box li .earned-credits {
+            color: #25b885;
+  }
+  .booking-details-page .ticket-box section .ticket-bottom .ticket-process-box li .more-details {
+            color: #00699e;
+  }
+  .booking-details-page .ticket-box section .ticket-bottom .ticket-process-box li.none .earned-credits {
+            color: rgba(0, 0, 0, 0.38);
+  }
+  .booking-details-page .ticket-box section .ticket-bottom .ticket-operate .trans_btn {
+        margin-top: 12px;
+  }
+  .booking-details-page .ticket-box section .ticket-bottom .ticket-operate .refund {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+  }
+  .booking-details-page .ticket-box section .ticket-bottom .ticket-operate .refund > p {
+          font-size: 14px;
+          margin-top: 14px;
+          color: #007dae;
+  }
+  .booking-details-page .ticket-box section .ticket-bottom .ticket-operate .refund > p.howChange {
+            text-align: left;
+  }
+  .booking-details-page .ticket-box section .ticket-bottom .buy-again .opa-btn {
+        margin-top: 12px;
+  }
+  .booking-details-page .ticket-box__special {
+      margin: 16px -16px -24px;
+      padding: 16px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      background-color: #fafafa;
+      color: rgba(0, 0, 0, 0.54);
+      font-size: 14px;
+  }
+  .booking-details-page .ticket-box__special svg {
+        width: 16px;
+        height: 16px;
+        margin-right: 8px;
+  }
+  .booking-details-page .ticket-box__special span {
+        -webkit-box-flex: 1;
+            -ms-flex: 1;
+                flex: 1;
+  }
+  .booking-details-page .payment-detail__header {
+      position: fixed;
+      top: 48px;
+      z-index: 4;
+      width: 100%;
+      height: 48px;
+      padding: 16px;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.12);
+  }
+  .booking-details-page .payment-detail__header svg {
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        left: 12px;
+  }
+  .booking-details-page .payment-detail__header .refund-header--text {
+        color: rgba(0, 0, 0, 0.87);
+  }
+  .booking-details-page .payment-detail__header .refund-opt--btn {
+        right: 16px;
+        color: rgba(0, 0, 0, 0.87);
+  }
+  .booking-details-page .payment-detail__item {
+      margin: 16px;
+  }
+  .booking-details-page .payment-detail__item__title {
+        box-shadow: inset 0 0.5px 0 0 rgba(0, 0, 0, 0.12), inset 0 -0.5px 0 0 rgba(0, 0, 0, 0.12);
+        height: 56px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        padding: 0 16px;
+        background-color: #fafafa;
+        font-size: 16px;
+        color: #25b885;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+  }
+  .booking-details-page .payment-detail__item__title__rule {
+          color: #00699e;
+  }
+  .booking-details-page .payment-detail__item__detail {
+        background-color: #fff;
+        color: rgba(0, 0, 0, 0.87);
+        font-size: 14px;
+        padding-bottom: 16px;
+  }
+  .booking-details-page .payment-detail__item__detail__unit {
+          padding-top: 21px;
+  }
+  .booking-details-page .payment-detail__item__detail__unit:first-of-type {
+            padding-top: 14px;
+  }
+  .booking-details-page .payment-detail__item__detail__unit .small-text {
+            margin-top: 9px;
+            font-size: 12px;
+            color: rgba(0, 0, 0, 0.54);
+  }
+  .booking-details-page .payment-detail__item__detail__unit .payment-amount-grey {
+            color: rgba(0, 0, 0, 0.54);
+            margin-bottom: 8px;
+  }
+  .booking-details-page .payment-detail__item__detail__unit .line {
+            margin: 14px 16px 16px;
+            height: 1px;
+            background-color: #eeeeee;
+  }
+  .booking-details-page .payment-detail__item__detail__unit .gift-card-box {
+            position: relative;
+            border: solid 1px #eeeeee;
+            margin: 16px 16px 0;
+            padding: 12px 0;
+  }
+  .booking-details-page .payment-detail__item__detail__unit .gift-card-box .flex-between {
+              padding: 0 12px;
+              -webkit-box-align: center;
+                  -ms-flex-align: center;
+                      align-items: center;
+  }
+  .booking-details-page .payment-detail__item__detail__unit .gift-card-box .gift-actual-pay {
+              margin-top: 12px;
+  }
+  .booking-details-page .payment-detail__item__detail__unit .gift-card-box .gift-actual-pay .transaction-container {
+                text-align: right;
+                margin-top: 4px;
+                padding: 0 12px;
+                color: rgba(0, 0, 0, 0.54);
+  }
+  .booking-details-page .payment-detail__item__detail__unit .gift-card-box:after {
+              content: '';
+              display: block;
+              position: absolute;
+              top: -6px;
+              right: 16px;
+              width: 10px;
+              height: 10px;
+              border-left: 1px solid #eeeeee;
+              border-top: 1px solid #eeeeee;
+              background-color: white;
+              -webkit-transform: rotate(45deg);
+                      transform: rotate(45deg);
+  }
+  .booking-details-page .payment-detail__item__detail__unit .gift-card-box .payment-amount-grey {
+              margin-bottom: 0;
+  }
+  .booking-details-page .payment-detail__item__detail .flex-between {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          padding: 0 16px;
+          -webkit-box-pack: justify;
+              -ms-flex-pack: justify;
+                  justify-content: space-between;
+  }
+  .booking-details-page .payment-detail__item__detail .dot-line {
+          height: 1px;
+          width: 100%;
+          position: relative;
+          margin-top: 24px;
+          border-bottom: 1px dashed #eeeeee;
+  }
+  .booking-details-page .payment-detail__item__detail .dot-line i {
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background-color: #eee;
+            top: 50%;
+  }
+  .booking-details-page .payment-detail__item__detail .dot-line i::before {
+              content: '';
+              width: 50%;
+              height: 100%;
+              position: absolute;
+              background: #eee;
+  }
+  .booking-details-page .payment-detail__item__detail .dot-line i:first-of-type {
+              left: 0;
+              -webkit-transform: translate(-45%, -50%);
+                      transform: translate(-45%, -50%);
+  }
+  .booking-details-page .payment-detail__item__detail .dot-line i:first-of-type::before {
+                left: 0;
+  }
+  .booking-details-page .payment-detail__item__detail .dot-line i:last-of-type {
+              right: 0;
+              -webkit-transform: translate(45%, -50%);
+                      transform: translate(45%, -50%);
+  }
+  .booking-details-page .payment-detail__item__detail .dot-line i:last-of-type::before {
+                right: 0;
+  }
+  .booking-details-page .payment-detail__item__footer {
+        box-shadow: inset 0 0.5px 0 0 rgba(0, 0, 0, 0.12), inset 0 -0.5px 0 0 rgba(0, 0, 0, 0.12);
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        padding: 16px;
+        background-color: #fafafa;
+        color: rgba(0, 0, 0, 0.54);
+        -webkit-box-pack: end;
+            -ms-flex-pack: end;
+                justify-content: flex-end;
+  }
+  .booking-details-page .payment-detail__item__footer svg {
+          margin-left: 5px;
+  }
+  .booking-details-page .refund-detail-header {
+      position: fixed;
+      top: 44px;
+      z-index: 4;
+      width: 100%;
+      height: 48px;
+      padding: 16px;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.12);
+  }
+  .booking-details-page .refund-detail-header .refund-header--text {
+        color: rgba(0, 0, 0, 0.87);
+        -webkit-box-flex: 1;
+            -ms-flex: 1;
+                flex: 1;
+        text-align: center;
+  }
+  .booking-details-page .refund-detail-header .refund-opt--btn {
+        right: 16px;
+        padding: 4px 8px;
+        color: rgba(0, 0, 0, 0.38);
+        border: solid 0.5px rgba(0, 0, 0, 0.38);
+        border-radius: 2px;
+  }
+  .booking-details-page .refund-detail-header .refund-opt--btn.required {
+          color: rgba(0, 0, 0, 0.87);
+          border: solid 0.5px rgba(0, 0, 0, 0.87);
+  }
+  .booking-details-page .refund-detail-header svg {
+        opacity: 0.6;
+  }
+  .booking-details-page .refund-infos__item {
+      margin: 16px;
+      background-color: white;
+  }
+  .booking-details-page .refund-infos__item__title {
+        box-shadow: inset 0 0.5px 0 0 rgba(0, 0, 0, 0.12), inset 0 -0.5px 0 0 rgba(0, 0, 0, 0.12);
+        height: 56px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        padding: 0 16px;
+        background-color: #fafafa;
+        font-size: 14px;
+  }
+  .booking-details-page .refund-infos__item__title svg {
+          margin-right: 8px;
+  }
+  .booking-details-page .refund-infos__item__title__processing {
+          color: #ffb433;
+  }
+  .booking-details-page .refund-infos__item__title__refunded {
+          color: #25b885;
+  }
+  .booking-details-page .refund-infos__item__content {
+        padding: 16px;
+        font-size: 12px;
+  }
+  .booking-details-page .refund-infos__item__content__title {
+          margin-bottom: 4px;
+  }
+  .booking-details-page .refund-infos__item__content__line {
+          height: 1px;
+          background-color: rgba(0, 0, 0, 0.12);
+          margin: 16px 0;
+  }
+  .booking-details-page .refund-infos__item__content__tip {
+          color: rgba(0, 0, 0, 0.38);
+          margin-top: 4px;
+  }
+  .booking-details-page .refund-infos__item__content__info {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: justify;
+              -ms-flex-pack: justify;
+                  justify-content: space-between;
+  }
+  .booking-details-page .refund-infos__item__content__item {
+          padding-bottom: 16px;
+  }
+  .booking-details-page .refund-infos__item__content__item:last-of-type {
+            padding-bottom: 0;
+  }
+  @media (max-width: 320px) {
+  .booking-details-page .refund-infos__item {
+        margin: 8px;
+  }
+  }
+  .booking-details-page .refund-result {
+      padding: 40px 16px;
+  }
+  .booking-details-page .refund-result .refund-processing, .booking-details-page .refund-result .refund-done {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+  }
+  .booking-details-page .refund-result .refund-processing > *:not(last-child), .booking-details-page .refund-result .refund-done > *:not(last-child) {
+          margin-bottom: 16px;
+  }
+  .booking-details-page .refund-result svg {
+        font-size: 70px;
+  }
+  .booking-details-page .refund-result h6 {
+        font-size: 24px;
+  }
+  .booking-details-page .refund-result p {
+        color: rgba(0, 0, 0, 0.54);
+  }
+  .booking-details-page .refund-title {
+      box-sizing: border-box;
+      height: 56px;
+      padding: 12px 16px;
+      -webkit-box-align: end;
+          -ms-flex-align: end;
+              align-items: flex-end;
+      color: rgba(0, 0, 0, 0.54);
+  }
+  .booking-details-page .refund-title div.flex {
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+  }
+  .booking-details-page .refund-title div.flex span {
+          margin-right: 10px;
+  }
+  .booking-details-page .refund-details__header {
+      position: fixed;
+      top: 48px;
+      z-index: 4;
+      width: 100%;
+      height: 48px;
+      padding: 16px;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.12);
+  }
+  .booking-details-page .refund-details__header svg {
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        left: 12px;
+  }
+  .booking-details-page .refund-details__header .refund-header--text {
+        color: rgba(0, 0, 0, 0.87);
+  }
+  .booking-details-page .refund-details__header .refund-opt--btn {
+        right: 16px;
+        color: rgba(0, 0, 0, 0.87);
+  }
+  .booking-details-page .refund-details__info {
+      background-color: white;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      padding: 16px;
+      color: rgba(0, 0, 0, 0.87);
+  }
+  .booking-details-page .refund-details__info__left p:nth-of-type(2) {
+        margin-top: 4px;
+        margin-bottom: 8px;
+  }
+  .booking-details-page .refund-details__info__left p:nth-of-type(4) {
+        margin-top: 4px;
+  }
+  .booking-details-page .refund-details__info__edit {
+        white-space: nowrap;
+        margin-left: 8px;
+        padding: 4px 8px;
+        border: solid 1px rgba(0, 0, 0, 0.87);
+  }
+  .booking-details-page .refund-details__current {
+      background-color: white;
+      padding: 16px;
+      box-shadow: inset 0 0.5px 0 0 rgba(0, 0, 0, 0.12);
+      color: rgba(0, 0, 0, 0.87);
+  }
+  .booking-details-page .refund-details__current p:first-of-type {
+        margin-bottom: 4px;
+  }
+  .booking-details-page .refund-details__list {
+      padding-left: 16px;
+  }
+  .booking-details-page .refund-details__item {
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      padding: 16px;
+      padding-left: 0;
+  }
+  .booking-details-page .refund-details__item:not(:last-child) {
+        box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.12);
+  }
+  .booking-details-page .refund-details__item > div:last-child {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: end;
+            -ms-flex-align: end;
+                align-items: flex-end;
+  }
+  .booking-details-page .refund-details__item > div:last-child > span.price {
+          margin-top: 4px;
+          color: rgba(0, 0, 0, 0.38);
+  }
+  .booking-details-page .refund-details__apply-btn {
+      margin: 32px 16px 16px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      height: 48px;
+      border-radius: 2px;
+      background-color: #ff5722;
+      color: white;
+  }
+  .booking-details-page .refund-details__tc {
+      text-align: center;
+      color: rgba(0, 105, 158, 0.87);
+  }
+  .booking-details-page .refund-reason__select-box {
+      height: 48px;
+      padding: 16px;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+  }
+  .booking-details-page .refund-reason__select-box .reason-content {
+        -ms-flex-item-align: start;
+            align-self: flex-start;
+        height: 20px;
+        margin-right: 16px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+  }
+  .booking-details-page .refund-reason__select-box .reason-content .select-hint {
+          color: rgba(0, 0, 0, 0.38);
+  }
+  .booking-details-page .refund-reason__select-box .arrow {
+        -webkit-transform: rotate(90deg);
+                transform: rotate(90deg);
+        color: rgba(0, 0, 0, 0.54);
+  }
+  .booking-details-page .refund-other__desc {
+      box-sizing: border-box;
+      border: none;
+      resize: none;
+      width: 100%;
+      height: 120px;
+      padding: 16px;
+      overflow: scroll;
+      border-radius: 0;
+  }
+  .booking-details-page .refund-other__desc::-webkit-input-placeholder {
+        color: rgba(0, 0, 0, 0.38);
+  }
+  .booking-details-page .refund-select {
+      position: fixed;
+      z-index: 120;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #eee;
+      overflow: scroll;
+  }
+  .booking-details-page .refund-select .select-header {
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        height: 44px;
+        box-shadow: inset 0 -0.5px 0 0 rgba(0, 0, 0, 0.12);
+  }
+  .booking-details-page .refund-select .select-header svg {
+          padding: 12px;
+          left: 0;
+          color: rgba(0, 0, 0, 0.54);
+  }
+  .booking-details-page .refund-select ul {
+        padding-left: 16px;
+  }
+  .booking-details-page .refund-select ul li {
+          padding: 16px 56px 16px 0;
+  }
+  .booking-details-page .refund-select ul li:not(last-child) {
+            box-shadow: inset 0 -0.5px 0 0 rgba(0, 0, 0, 0.12);
+  }
+  .booking-details-page .refund-select ul li svg {
+            right: 16px;
+            font-size: 30px;
+  }
+  .booking-details-page .refund-unit {
+      margin-bottom: 7px;
+  }
+  .booking-details-page .refund-unit .refund-title {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+  }
+  .booking-details-page .refund-unit .refund-title span:nth-of-type(2) {
+          color: #00699e;
+  }
+  .booking-details-page .refund-unit__container {
+        background-color: white;
+  }
+  .booking-details-page .refund-unit__container:last-of-type .refund-unit__item {
+          border-bottom: 0;
+  }
+  .booking-details-page .refund-unit__title {
+        padding-left: 16px;
+        background-color: white;
+  }
+  .booking-details-page .refund-unit__title p {
+          font-size: 16px;
+          padding: 10px;
+          padding-left: 0;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  }
+  .booking-details-page .refund-unit__pkg-hint {
+        padding-left: 8px;
+        background-color: white;
+  }
+  .booking-details-page .refund-unit__pkg-hint > div {
+          padding: 8px 16px;
+          padding-left: 0;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  }
+  .booking-details-page .refund-unit__pkg-hint > div > div {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            padding: 8px;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+  }
+  .booking-details-page .refund-unit__pkg-hint > div > div svg {
+              width: 24px;
+              height: 24px;
+              margin-right: 8px;
+  }
+  .booking-details-page .refund-unit__pkg-hint > div > div span {
+              font-size: 14px;
+              color: rgba(0, 0, 0, 0.54);
+  }
+  .booking-details-page .refund-unit__pkg-hint > div > div.alert {
+              background-color: #ffebeb;
+  }
+  .booking-details-page .refund-unit__add-on-hint {
+        padding: 16px;
+        background-color: #fef7d4;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+  }
+  .booking-details-page .refund-unit__add-on-hint span {
+          font-size: 14px;
+          color: rgba(0, 0, 0, 0.87);
+          -webkit-box-flex: 1;
+              -ms-flex: 1;
+                  flex: 1;
+  }
+  .booking-details-page .refund-unit__add-on-hint svg {
+          width: 12px;
+          height: 12px;
+          margin-left: 10px;
+  }
+  .booking-details-page .refund-unit__item {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        margin-left: 16px;
+        padding: 16px;
+        padding-left: 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+        font-size: 16px;
+  }
+  .booking-details-page .refund-unit__item .hint-gray {
+          font-size: 12px;
+          color: rgba(0, 0, 0, 0.38);
+  }
+  .booking-details-page .refund-unit__item__left {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column;
+  }
+  .booking-details-page .refund-unit__item__left__price {
+            margin: 4px 0;
+            font-size: 14px;
+  }
+  .booking-details-page .refund-unit__item__right {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column;
+          -webkit-box-align: end;
+              -ms-flex-align: end;
+                  align-items: flex-end;
+  }
+  .booking-details-page .refund-unit__item__counter {
+          margin-bottom: 12px;
+  }
+  .booking-details-page .refund-form {
+      padding-bottom: 84px;
+  }
+  .booking-details-page .refund-form__header {
+        position: fixed;
+        top: 44px;
+        z-index: 4;
+        width: 100%;
+        height: 48px;
+        padding: 16px;
+        -webkit-box-pack: end;
+            -ms-flex-pack: end;
+                justify-content: flex-end;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        background-color: white;
+        font-size: 16px;
+        box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.12);
+        color: rgba(0, 0, 0, 0.87);
+  }
+  .booking-details-page .refund-form__header__text {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          -webkit-transform: translate(-50%, -50%);
+                  transform: translate(-50%, -50%);
+  }
+  .booking-details-page .refund-form__header__btn {
+          margin-left: 5px;
+          font-size: 14px;
+  }
+  .booking-details-page .refund-form__footer {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        width: 100%;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        border-top: solid 1px rgba(0, 0, 0, 0.12);
+        padding: 8px;
+        position: fixed;
+        bottom: 0;
+        height: 60px;
+        background-color: white;
+  }
+  .booking-details-page .refund-form__footer__info {
+          -webkit-box-flex: 2;
+              -ms-flex: 2;
+                  flex: 2;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column;
+  }
+  .booking-details-page .refund-form__footer__info span {
+            font-size: 12px;
+            color: rgba(0, 0, 0, 0.38);
+            margin-bottom: 4px;
+  }
+  .booking-details-page .refund-form__footer__info strong:last-of-type {
+            color: #ff5722;
+            font-size: 16px;
+  }
+  .booking-details-page .refund-form__footer__btn {
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+          -webkit-box-flex: 1;
+              -ms-flex: 1;
+                  flex: 1;
+          padding: 16px;
+          min-width: 127px;
+          color: white;
+          font-size: 16px;
+          background-color: #ff5722;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          border-radius: 2px;
+          height: 100%;
+  }
+  .booking-details-page .refund-form__footer__btn.disabled {
+            background-color: #d1d1d1;
+  }
+  .booking-details-page .refund-tc__header {
+      z-index: 2;
+      position: fixed;
+      width: 100%;
+      top: 48px;
+      height: 48px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      background: white;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      padding: 0 16px;
+  }
+  .booking-details-page .refund-tc__header p {
+        -webkit-box-flex: 1;
+            -ms-flex: 1;
+                flex: 1;
+        text-align: center;
+  }
+  .booking-details-page .refund-tc .tc-box {
+      background-color: #fff;
+      overflow: scroll;
+      height: 100%;
+  }
+  .booking-details-page .refund-tc .tc-box .tc-container {
+        padding: 24px;
+        min-height: 50vh;
+  }
+  .booking-details-page .refund-tc .tc-box .tc-container .tc-title {
+          margin-bottom: 8px;
+  }
+  .booking-details-page .refund-tc .tc-box .tc-container .tc-text {
+          line-height: 1.5;
+  }
+  .booking-details-page .refund-tc .tc-box .opt-btn {
+        height: 44px;
+        font-weight: bold;
+        line-height: 44px;
+        box-shadow: inset 0 0.5px 0 0 #e0e0e0;
+  }
+  .booking-details-page .refund-tc .tc-box .gradient-cover {
+        height: 48px;
+        width: 100%;
+        left: 0;
+        bottom: 68px;
+        background-image: -webkit-linear-gradient(bottom, white, rgba(255, 255, 255, 0));
+        background-image: linear-gradient(to top, white, rgba(255, 255, 255, 0));
+  }
+  .booking-details-page .klk_dialog_wrapper {
+      /*display: none;*/
+      position: fixed;
+      z-index: 101;
+      background-color: rgba(0, 0, 0, 0.3);
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+  }
+  .booking-details-page .klk_dialog__coupon {
+      position: absolute;
+      z-index: 101;
+      background-color: #fff;
+      top: 50%;
+      left: 50%;
+      width: 295px;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      border-radius: 2px;
+  }
+  .booking-details-page .klk_dialog__coupon--main {
+      padding: 16px;
+  }
+  .booking-details-page .klk_dialog__coupon--main .discount_desc__div {
+        font-size: 20px;
+        color: #ff5722;
+        margin-bottom: 4px;
+  }
+  .booking-details-page .klk_dialog__coupon--main div:first-child {
+        padding-bottom: 11px;
+        border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+  }
+  .booking-details-page .klk_dialog__coupon--main div:first-child p {
+          font-size: 14px;
+  }
+  .booking-details-page .klk_dialog__coupon--main div:last-child {
+        padding-top: 11px;
+  }
+  .booking-details-page .klk_dialog__coupon--main div:last-child p {
+          font-size: 12px;
+          margin-bottom: 4px;
+  }
+  .booking-details-page .klk_dialog__coupon--main div:last-child p:last-child {
+            margin-bottom: 0;
+  }
+  .booking-details-page .klk_dialog__coupon--main div:last-child p:nth-last-child(-n+2) {
+            color: rgba(0, 0, 0, 0.38);
+  }
+  .booking-details-page .klk_dialog__coupon--opts {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      position: relative;
+      height: 44px;
+  }
+  .booking-details-page .klk_dialog__coupon--opts::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: #e0e0e0;
+        -webkit-transform: scaleY(0.5);
+                transform: scaleY(0.5);
+  }
+  .booking-details-page .klk_dialog__coupon--opt {
+      -webkit-box-flex: 1;
+          -ms-flex: 1;
+              flex: 1;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      height: 44px;
+      font-size: 16px;
+      color: rgba(0, 0, 0, 0.87);
+  }
+  .booking-details-page .klk_dialog__coupon--opt.t_bold {
+        font-weight: 600;
+  }
+  .booking-details-page .klk_dialog__download {
+      position: absolute;
+      z-index: 101;
+      background-color: #fff;
+      top: 50%;
+      left: 50%;
+      width: 295px;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      border-radius: 2px;
+  }
+  .booking-details-page .klk_dialog__download--main {
+      padding: 24px;
+      border-bottom: 1px solid #e0e0e0;
+  }
+  .booking-details-page .klk_dialog__download--main .download_text {
+        font-size: 14px;
+        text-align: center;
+  }
+  .booking-details-page .klk_dialog__download--opt {
+      height: 44px;
+      font-size: 16px;
+      line-height: 44px;
+      text-align: center;
+  }
+  .booking-details-page .klk_dialog__download--opt:not(:last-child) {
+        border-bottom: 1px solid #e0e0e0;
+  }
+  .booking-details-page .klk_dialog__download--opt.t_bold {
+        font-weight: 600;
+  }
+  .booking-details-page .klk_dialog__wifi--main {
+      padding-bottom: 16px;
+  }
+  .booking-details-page .klk_dialog__wifi--content {
+      padding: 16px 24px 24px;
+      max-height: 300px;
+      overflow-y: scroll;
+  }
+  .booking-details-page .klk_dialog__wifi--content .property {
+        margin-bottom: 12px;
+  }
+  .booking-details-page .klk_dialog__wifi--content .property .name {
+          font-size: 14px;
+          color: rgba(0, 0, 0, 0.38);
+          margin-bottom: 4px;
+  }
+  .booking-details-page .klk_dialog__wifi--content .property .desc {
+          font-size: 16px;
+          color: rgba(0, 0, 0, 0.87);
+  }
+  .booking-details-page .klk_dialog__wifi--content .property:last-child {
+          margin-bottom: 0;
+  }
+  .booking-details-page .klk_dialog__wifi--opts {
+      padding: 11px 16px;
+      font-size: 16px;
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.87);
+      text-align: center;
+      border-top: 1px solid #e0e0e0;
+  }
+  .booking-details-page .klk_dialog__rail--content {
+      padding: 16px 24px 24px;
+      max-height: 300px;
+      overflow-y: scroll;
+      font-size: 14px;
+      color: rgba(0, 0, 0, 0.54);
+  }
+  .booking-details-page .klk_dialog__rail--content.text {
+        color: rgba(0, 0, 0, 0.87);
+  }
+  .booking-details-page .klk_dialog__rail--main {
+      padding-bottom: 0;
+      border-bottom: none;
+      font-size: 20px;
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.97);
+  }
+  .booking-details-page .booking_detail_count_down {
+      margin-top: 16px;
+  }
+  .booking-details-page .booking_detail_count_down__label {
+        height: 16px;
+        font-size: 14px;
+        line-height: 16px;
+        color: rgba(0, 0, 0, 0.54);
+  }
+  .booking-details-page .booking_detail_count_down__time {
+        margin-top: 4px;
+        height: 24px;
+        line-height: 24px;
+        font-size: 20px;
+        font-weight: 600;
+        color: #ffa628;
+  }
+  .booking-details-page .booking_detail_opt {
+      margin-top: 16px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: end;
+          -ms-flex-pack: end;
+              justify-content: flex-end;
+  }
+  .booking-details-page .booking_detail_opt__cancel {
+        position: relative;
+        padding: 0 12px;
+        height: 36px;
+        line-height: 36px;
+        font-size: 14px;
+        text-align: center;
+        color: rgba(0, 0, 0, 0.87);
+        border-radius: 2px;
+  }
+  .booking-details-page .booking_detail_opt__cancel::after {
+          content: '';
+          box-sizing: border-box;
+          position: absolute;
+          top: 0;
+          left: 0;
+          border: 1px solid rgba(0, 0, 0, 0.87);
+          width: 200%;
+          height: 200%;
+          -webkit-transform: scale(0.5);
+                  transform: scale(0.5);
+          -webkit-transform-origin: left top;
+                  transform-origin: left top;
+          border-radius: 2px;
+  }
+  .booking-details-page .booking_detail_opt__continue_box {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        position: fixed;
+        z-index: 1;
+        bottom: 0;
+        left: 0;
+        padding: 8px;
+        width: 100%;
+        height: 60px;
+        background-color: #ffffff;
+        box-shadow: inset 0 -0.5px 0 0 rgba(0, 0, 0, 0.12);
+  }
+  .booking-details-page .booking_detail_opt__continue {
+        -webkit-box-flex: 1;
+            -ms-flex: auto;
+                flex: auto;
+        line-height: 44px;
+        font-size: 16px;
+        font-weight: 600;
+        text-align: center;
+        color: #ffffff;
+        border-radius: 2px;
+        background-color: #ff5722;
+  }
+  .booking-details-page .booking_detail_opt__continue:active {
+          background-color: #df3d0a;
+  }
+  .booking-details-page .rail_ticekt_detail {
+      width: 100%;
+      height: 100%;
+      background: white;
+      position: fixed;
+      top: 0;
+      z-index: 10;
+      background: #eeeeee;
+  }
+  .booking-details-page .rail_ticekt_detail header {
+        padding: 0 px2rem(10) 0 px2rem(12);
+        height: 44px;
+        border-bottom: 1px solid #e0e0e0;
+        position: relative;
+        z-index: 1;
+        box-sizing: border-box;
+  }
+  .booking-details-page .rail_ticekt_detail header .filter_close_icon {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          height: 100%;
+          padding-left: 8px;
+  }
+  .booking-details-page .rail_ticekt_detail header .clear_btn {
+          padding: 4px 8px;
+          font-size: 14px;
+          border: solid 0.5px rgba(0, 0, 0, 0.87);
+          border-radius: 2px;
+  }
+  .booking-details-page .rail_ticekt_detail header .disable {
+          color: rgba(0, 0, 0, 0.24);
+          border: solid 0.5px rgba(0, 0, 0, 0.24);
+  }
+  .booking-details-page .rail_ticekt_detail .other_div {
+        background-color: #fff;
+        padding: 16px;
+        height: 100%;
+        overflow-y: scroll;
+        padding-bottom: 60px;
+  }
+  .booking-details-page .mask-tip {
+      width: 80%;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+  }
+  .booking-details-page .error-tip {
+      position: fixed;
+      top: 0;
+      z-index: 100;
+  }
+  
+
+  
+.bookings-page .flex_v_b {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .bookings-page .flex_b {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .bookings-page .flex_v_r {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .bookings-page .klook-icon-order-confirming {
+    color: #ffa628;
+  }
+  .bookings-page .klook-icon-order-confirmed {
+    color: #25b885;
+  }
+  .bookings-page .main-container > .booking-title {
+    font-weight: 600;
+    height: 48px;
+    line-height: 48px;
+  }
+  .bookings-page .main-container .trans_btn {
+    display: inline-block;
+    padding: 10px 12px;
+    font-size: 14px;
+    line-height: 16px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 2px;
+    color: rgba(0, 0, 0, 0.87);
+    border-color: rgba(0, 0, 0, 0.87);
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    height: 36px;
+    box-sizing: border-box;
+  }
+  .bookings-page .main-container .trans_btn.main {
+      color: #ff5722;
+      border-color: #ff5722;
+  }
+  .bookings-page .main-container .trans_btn.canceled {
+      color: rgba(0, 0, 0, 0.24);
+      border-color: rgba(0, 0, 0, 0.24);
+  }
+  .bookings-page .main-container .opa-btn {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 10px 12px;
+    height: 36px;
+    font-size: 14px;
+    line-height: 16px;
+    color: #fff;
+    border-radius: 2px;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+  }
+  .bookings-page .main-container .opa-btn.main {
+      background-color: #ff5722;
+  }
+  .bookings-page .main-container .border_top {
+    background-image: url("https://res.klook.com/image/upload/v1523243038/wave-top_f3gnbh.png");
+    background-repeat: repeat-x;
+    height: 16px;
+    background-color: #eee;
+  }
+  .bookings-page .main-container .border_top.stick {
+      background-image: url("https://res.klook.com//image/upload/v1552551558/web3.0/wave-top_vfdbgr.png");
+  }
+  .bookings-page .main-container .border_bottom {
+    background-image: url("https://res.klook.com/image/upload/v1523243050/wave-bottom_qqqwvj.png");
+    background-repeat: repeat-x;
+    height: 16px;
+    background-color: #eee;
+  }
+  .bookings-page .main-container .border_bottom.stick {
+      background-image: url("https://res.klook.com/image/upload/v1552551600/web3.0/wave-bottom_fmkfle.png");
+  }
+  .bookings-page .main-container .status_confirmed {
+    color: #32ad82;
+  }
+  .bookings-page .main-container .status_processing {
+    color: #fc7f0a;
+  }
+  .bookings-page .main-container .status_wait_pay {
+    color: #ffa628;
+  }
+  .bookings-page .main-container .status_wait_pay {
+    color: #ffa628;
+  }
+  .bookings-page .main-container .status_partial_cancel {
+    color: #ffa628;
+  }
+  .bookings-page .main-container .status_expired {
+    color: rgba(0, 0, 0, 0.87);
+  }
+
+
+
+.qrCode_container {
+    display: flex;
+  justify-content: center;
+  text-align: center;
+  .ion_card {
+    --background: #fff;
+    background-color: #fff;
+    width: 70%;
+  }
+}
+
+
+.ticket-title {
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 600;
+}

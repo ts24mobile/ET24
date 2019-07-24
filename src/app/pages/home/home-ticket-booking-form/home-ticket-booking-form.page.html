@@ -1,0 +1,126 @@
+<ion-header>
+
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <!-- <ion-back-button text=""></ion-back-button> -->
+      <ion-back-button text="" defaultHref=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>Lựa chọn đơn hàng</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="booking_wifi_attrs">
+    <p class="booking_wifi_attrs__txt">Vé tour tham quan Suối Tiên</p>
+    <!-- <button
+      class="booking_wifi_attrs__edit klk_btn klk_btn--small"><span class="klk_btn__txt">Chỉnh sửa</span>
+    </button> -->
+  </div>
+  <div class="booking_wifi_date_box">
+    <header class="klk_header2"><span class="klk_header2__title">Ngày </span>
+      <!---->
+    </header>
+    <div class="klk_select_input">
+      <div class="klk_select_input__content_wrap">
+        <span class="klk_select_input__content">
+          <ion-datetime min="{{currentDay}}" displayFormat="DD-MM-YYYY" [(ngModel)]="cart.date"
+            pickerFormat="DD MM YYYY">
+          </ion-datetime>
+        </span>
+        <div class="klk_select_input__content_desc" style="display: none;"></div>
+        <!---->
+      </div> <svg aria-hidden="true" class="klk_c_symbol klook-symbol klk_select_input__icon"
+        style="font-size: 24px; color: rgba(0, 0, 0, 0.54);">
+        <use xlink:href="#icon-arrow-right"></use>
+      </svg>
+    </div>
+  </div>
+  <div class="booking_wifi_units_box">
+    <header class="klk_header2"><span class="klk_header2__title">Số lượng</span>
+      <!---->
+    </header>
+    <!---->
+    <div class="booking_wifi_units">
+      <div class="klk_alert booking_wifi_units__alert" style="background-color: rgb(255, 255, 255); display: none;"><svg
+          aria-hidden="true" class="klk_c_symbol klook-symbol klk_alert__icon"
+          style="font-size: 24px; transform: rotate(180deg);">
+          <use xlink:href="#icon-notice2"></use>
+        </svg>
+        <p class="klk_alert__content">Bạn phải chọn <span class="min_pax">1</span> hoặc nhiều hơn để tiếp tục</p>
+      </div>
+      <div class="booking_wifi_unit booking_wifi_unit--with_bottom_border">
+        <div class="booking_wifi_unit_info">
+          <p class="booking_wifi_unit_info__name">Người lớn</p>
+          <p class="booking_wifi_unit_info__price">{{cart.adult_price | currency: 'VND': 'symbol' : '3.0'}}</p>
+          <!---->
+          <!---->
+        </div>
+        <div class="klk_counter booking_wifi_unit__counter"><span
+            class="klk_counter__num">{{ cart.adult_quantity }}</span>
+          <div class="klk_counter__counter">
+            <p [ngClass]="{'klk_counter__minus--disabled': cart.adult_quantity == 0}" class="klk_counter__minus"
+              (click)="AddSub_Adult_OnClick(cart, 'sub')"><i
+                [ngClass]="{'klk_counter__icon_row--disabled': cart.adult_quantity == 0}"
+                class="klk_counter__icon_row"></i></p>
+
+            <p class="klk_counter__plus" (click)="AddSub_Adult_OnClick(cart, 'add')"><i
+                class="klk_counter__icon_row"></i>
+              <i class="klk_counter__icon_col"></i>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="booking_wifi_unit">
+        <div class="booking_wifi_unit_info">
+          <p class="booking_wifi_unit_info__name">Trẻ em (100cm - 140cm)</p>
+          <p class="booking_wifi_unit_info__price">{{cart.child_price | currency: 'VND': 'symbol' : '3.0'}}</p>
+          <!---->
+          <!---->
+        </div>
+        <div class="klk_counter booking_wifi_unit__counter"><span
+            class="klk_counter__num">{{ cart.child_quantity }}</span>
+          <div class="klk_counter__counter">
+            <p [ngClass]="{'klk_counter__minus--disabled': cart.child_quantity == 0}" class="klk_counter__minus"
+              (click)="AddSub_Child_OnClick(cart, 'sub')"><i
+                [ngClass]="{'klk_counter__icon_row--disabled': cart.child_quantity == 0}"
+                class="klk_counter__icon_row"></i></p>
+            <p class="klk_counter__plus" (click)="AddSub_Child_OnClick(cart, 'add')"><i
+                class="klk_counter__icon_row"></i> <i class="klk_counter__icon_col"></i></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="booking_wifi_bottom_placeholder"></div>
+  <div class="klk_bottom_booking">
+    <div class="klk_bottom_booking_basic">
+      <div class="klk_dot_loading" style="display: none;"><span class="klk_dot_loading__dot"></span> <span
+          class="klk_dot_loading__dot"></span> <span class="klk_dot_loading__dot"></span></div>
+      <div class="klk_bottom_booking_basic__keywords">
+        <p class="klk_bottom_booking_basic__keyword"><svg aria-hidden="true"
+            class="klk_c_symbol klook-symbol klk_bottom_booking_basic__icon">
+            <use xlink:href="#icon-fast"></use>
+          </svg> <span class="klk_bottom_booking_basic__desc">Xác nhận tức thời</span></p>
+        <p class="klk_bottom_booking_basic__keyword"><svg aria-hidden="true"
+            class="klk_c_symbol klook-symbol klk_bottom_booking_basic__icon">
+            <use xlink:href="#icon-cancelation_type"></use>
+          </svg> <span class="klk_bottom_booking_basic__desc">Hoàn huỷ miễn phí trong 24h</span></p>
+      </div>
+      <!-- <span class="klk_bottom_booking_basic__view_more">Xem thêm </span> -->
+    </div>
+    <div class="klk_bottom_booking_price">
+      <div class="klk_bottom_booking_price__price_box"><span
+          class="klk_bottom_booking_price__price">₫{{cart.total | currency: 'VND': 'symbol' : '3.0'| currencyFormat}}</span>
+        <!---->
+      </div>
+      <!-- <span class="klk_bottom_booking_price__credit"> +0 Credit</span> -->
+    </div>
+    <div *ngIf="cart.child_quantity == 0 || cart.adult_quantity == 0" class="klk_bottom_btn klk_bottom_booking_btn">
+      <button class="klk_bottom_btn__btn klk_bottom_btn__btn--is_disabled">Đặt ngay
+      </button></div>
+    <div *ngIf="cart.child_quantity > 0 || cart.adult_quantity > 0" class="klk_bottom_btn klk_bottom_booking_btn"
+      (click)="Booking()"><button class="klk_bottom_btn__btn">Đặt
+        ngay
+      </button></div>
+  </div>
+</ion-content>

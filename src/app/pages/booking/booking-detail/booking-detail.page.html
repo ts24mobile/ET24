@@ -1,0 +1,230 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" *ngIf="paymentPage == false">
+      <ion-back-button text=""></ion-back-button>
+    </ion-buttons>
+    <ion-buttons *ngIf="paymentPage == true" slot="start">
+      <ion-button (click)="paymentPage_onBack()">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Chi tiết đơn hàng</ion-title>
+  </ion-toolbar>
+  <ion-toolbar>
+    <div class="booking-num-date t_mid app_header" style="top: 48px;"><b class="t16 m_copy">Số đơn hàng:
+        {{cart.id}}</b>
+      <p class="t12 t_gray">Ngày đơn hàng:
+        24/7/2019 11:31</p>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="bookings-page booking-details-page">
+    <div class="main-container" style="">
+      <div class="booking-info m_bg_white">
+        <div class="header_placeholder"></div>
+        <div class="process-box">
+          <ul>
+            <li class="flex g_rel step">
+              <div class="g_rel step-icon">
+                <!----> <svg class="klook-symbol t24 g_abs status_confirmed">
+                  <use xlink:href="#icon-order-confirmed"></use>
+                </svg></div>
+              <div class="flex step-desc">
+                <p class="t14 step-name">Đang tiến hành / đơn hàng</p>
+                <!-- <span class="t12 confirm-date">24/7/2019
+                  11:31</span> -->
+                <!---->
+                <div class="flex g_rel special-tips-box">
+                  <div class="special-icon"><svg class="klook-symbol t24 status_processing">
+                      <use xlink:href="#icon-order-processing"></use>
+                    </svg></div>
+                  <div class="special-tips">
+                    <p class="t14">Đã tiến hành Thanh Toán</p>
+                    <!-- <span class="t12">Xin tiến
+                      hành thanh toán để tránh chậm trễ chuyến du lịch của bạn</span>
+                    <div class="booking_detail_count_down">
+                      <p class="booking_detail_count_down__label">Thời gian còn lại:</p>
+                      <p class="klk_count_down_time booking_detail_count_down__time">00:14:24</p>
+                    </div> -->
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="flex g_rel step">
+              <div class="g_rel step-icon">
+                <!---->
+                <!---->
+                <svg class="klook-symbol t24 g_abs status_confirmed">
+                  <use xlink:href="#icon-order-confirmed"></use>
+                </svg>
+              </div>
+              <div class="flex step-desc">
+                <p class="t14 step-name">Thanh toán thành công</p>
+                <!---->
+                <!---->
+                <!---->
+              </div>
+            </li>
+            <li class="flex g_rel step">
+              <div class="g_rel step-icon">
+                <!---->
+                <!---->
+                <svg class="klook-symbol t24 g_abs status_confirmed">
+                  <use xlink:href="#icon-order-confirmed"></use>
+                </svg>
+              </div>
+              <div class="flex step-desc">
+                <p class="t14 step-name">Đơn hàng đã xác nhận </p>
+                <!---->
+                <!---->
+                <!---->
+              </div>
+            </li>
+
+          </ul>
+          <!---->
+          <!---->
+          <!---->
+        </div>
+        <div class="price-box">
+          <!---->
+          <div class="total-price">
+            <div class="grand-total"><span>Số tiền thanh toán</span>
+              <span>{{cart.total | currency: 'VND': 'symbol' : '3.0'}}</span></div>
+            <!---->
+            <!---->
+            <!---->
+            <!---->
+          </div>
+          <div class="booking_detail_opt"><span data-type="cancel"
+              data-track-event="Bookings Details Page|Cancel Booking Clicked" class="booking_detail_opt__cancel">Hủy đơn
+              hàng</span>
+          </div>
+        </div>
+        <!---->
+        <div class="border_bottom"></div>
+      </div>
+      <div class="ticket-box">
+        <section class=""><span data-track-event="Bookings Screen|Activity Image &amp; Title Clicked|13283"
+            class="ticket-top flex_b">
+            <div>
+              <h3 class="ticket-title">SUỐI TIÊN</h3>
+              <p class="t14 ticket-date">{{date_format}} (Giờ địa phương)</p>
+              <!---->
+              <!---->
+              <!---->
+              <!---->
+            </div>
+            <div class="g_rel img-box"
+              style="background-image: url(&quot;https://www.suoitien.com//Data/Sites/1/Banner/Default/default.png&quot;);">
+            </div>
+          </span>
+          <div class="ticket-mid">
+            <p class="t14 t_black pkg-name">Vé tour tham quan Suối Tiên
+            </p>
+            <!---->
+            <!---->
+
+            <div *ngIf="cart.adult_quantity > 0 && cart.child_quantity == 0" class="flex_v_b t_gray t12 pkg-amount">
+              {{cart.adult_quantity}} x Người lớn
+            </div>
+            <div *ngIf="cart.child_quantity > 0 && cart.adult_quantity == 0" class="flex_v_b t_gray t12 pkg-amount">
+              {{cart.child_quantity}} x Trẻ em (100cm - 140cm)
+            </div>
+            <div *ngIf="cart.child_quantity > 0 && cart.adult_quantity > 0" class="pflex_v_b t_gray t12 pkg-amount">
+              {{cart.adult_quantity}} x Người lớn , {{cart.child_quantity}} x Trẻ em (100cm - 140cm)
+            </div>
+            <!---->
+            <div class="ticket-status">
+              <!---->
+              <!---->
+              <!---->
+            </div>
+            <!---->
+          </div>
+          <!---->
+          <div class="ticket-bottom">
+            <!---->
+            <!---->
+            <!---->
+            <!---->
+          </div>
+          <!---->
+
+          <h3 class="ticket-title">DANH SÁCH MÃ SOÁT VÉ</h3>
+          <div *ngFor="let code of cart_createdCode; let i = index">
+            <div class="qrCode_container">
+
+              <ion-card class="ion_card">
+                <ngx-qrcode [qrc-value]="convert_QRCode(code)">
+                </ngx-qrcode>
+                <p>{{ code.ticket_name }}</p>
+                <h3>{{code.id}}</h3>
+              </ion-card>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <!---->
+    <!---->
+    <!---->
+    <div class="refund-tc" style="display: none;">
+      <div class="refund-tc__header">
+        <p class="t18">Quy định hoàn huỷ</p>
+      </div>
+      <div class="tc-box g_rel">
+        <div class="tc-container">
+          <div class="tc-content t14">
+            <p class="tc-title t16"><strong>Quy định hoàn huỷ</strong></p> <br>
+            <p class="tc-text">Klook sử dụng thuật số bình quân gia quyền được sử dụng để ghi nhận
+              lại số tiền thanh toán cho mỗi đơn vị được liệt kê trong chi tiết của đơn hàng. Nếu bạn đã sử dụng mã ưu
+              đãi hoặc credit khi đặt, số tiền được giảm cũng sẽ được hiển thị. Klook sẽ hoàn trả số tiền tương ứng được
+              ghi trên mỗi đơn vị. Tuy nhiên, xin lưu ý rằng mã ưu đãi được sử dụng trong giao dịch không thể được hoàn
+              lại vào tài khoản của bạn.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div data-v-4f47b7a9="" class="klk_dialog_wrapper" style="display: none;">
+      <div data-v-4f47b7a9="" class="klk_dialog" style="display: none;">
+        <div data-v-4f47b7a9="" class="klk_dialog__div--main">
+          <div data-v-4f47b7a9="" class="klk_dialog__div--content simple"></div>
+        </div>
+        <div data-v-4f47b7a9="" class="klk_dialog__div--opts"></div>
+      </div>
+    </div>
+    <div data-v-50c9cd09="" class="klk_mask_tip mask-tip" style="display: none;"></div>
+    <div data-v-dc3b7d6e="" class="klk_error_tip error-tip" style="display: none;"></div>
+    <div class="er_regression_wrapper" style="display: none;">
+      <div class="er_regression">
+        <div class="er_regression_header"><svg aria-hidden="true"
+            class="klk_c_symbol klook-symbol er_regression_header__icon">
+            <use xlink:href="#icon-close"></use>
+          </svg> <span class="er_regression_header__txt"></span></div>
+        <div class="er_regression_main"></div>
+      </div>
+    </div>
+    <div class="loading_wrapper" style="display: none;">
+      <div class="loading">
+        <div class="loadingIcon"><i class="i_loadingWhite"></i></div>
+        <div slot="uploading" class="uploading"></div>
+      </div>
+    </div>
+    <!---->
+    <!---->
+    <!---->
+    <div class="rail_ticekt_detail" style="display: none;">
+      <header class="flex_v_justify t16 title m_bg_white"><span class="filter_close_icon"><i
+            class="klook-icon-close t20"></i></span> <span>Chi tiết </span> <span></span></header>
+      <div class="other_div scroll">
+        <!---->
+      </div>
+    </div>
+    <!---->
+
+  </div>
+
+</ion-content>
