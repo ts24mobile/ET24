@@ -25,22 +25,26 @@ export class BookingDetailPage implements OnInit {
       for (let index = 0; index < this.cart.adult_quantity; index++) {
         i++;
         this.cart_createdCode.push({
-          price: this.cart.adult_price,
-          ticket_name: 'Vé người lớn',
-          name_customer: this.cart.full_name,
-          id: this.cart.id + '-' + i,
-          date: this.cart.date
+          ticket_price: this.cart.adult_price,
+          ticket_name: 'Vé tour tham quan Suối Tiên',
+          ticket_type: 'Vé người lớn',
+          ticket_customer: this.cart.full_name,
+          ticket_id: this.cart.id + '-' + i,
+          ticket_date: this.cart.date,
+          ticket_state: 'Chưa xác nhận'
         });
 
       }
       for (let index = 0; index < this.cart.child_quantity; index++) {
         i++;
         this.cart_createdCode.push({
-          price: this.cart.child_price,
-          ticket_name: 'Vé trẻ em (100cm - 140cm)',
-          name_customer: this.cart.full_name,
-          id: this.cart.id + '-' + i,
-          date: this.cart.date
+          ticket_name: 'Vé tour tham quan Suối Tiên',
+          ticket_price: this.cart.child_price,
+          ticket_type: 'Vé trẻ em (100cm - 140cm)',
+          ticket_customer: this.cart.full_name,
+          ticket_id: this.cart.id + '-' + i,
+          ticket_date: this.cart.date,
+          ticket_state: 'Chưa xác nhận'
         });
 
       }
