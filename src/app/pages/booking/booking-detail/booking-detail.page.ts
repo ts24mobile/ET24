@@ -11,7 +11,7 @@ export class BookingDetailPage implements OnInit {
   cart: any;
   date_format: any;
   cart_createdCode = [];
-
+  new_date = moment(new Date()).format("DD/MM/YYYY HH:MM")
   constructor(
     private navCrl: NavControllerService
   ) {
@@ -26,6 +26,7 @@ export class BookingDetailPage implements OnInit {
         i++;
         this.cart_createdCode.push({
           ticket_price: this.cart.adult_price,
+          company_name: 'Suối Tiên',
           ticket_name: 'Vé tour tham quan Suối Tiên',
           ticket_type: 'Vé người lớn',
           ticket_customer: this.cart.full_name,
@@ -38,6 +39,7 @@ export class BookingDetailPage implements OnInit {
       for (let index = 0; index < this.cart.child_quantity; index++) {
         i++;
         this.cart_createdCode.push({
+          company_name: 'Suối Tiên',
           ticket_name: 'Vé tour tham quan Suối Tiên',
           ticket_price: this.cart.child_price,
           ticket_type: 'Vé trẻ em (100cm - 140cm)',

@@ -1,6 +1,7 @@
 import { NavControllerService } from './../../../services/navcontroller-service';
 import { Component, OnInit } from '@angular/core';
 import * as moment from 'moment';
+import { Events } from '@ionic/angular';
 @Component({
   selector: 'app-home-ticket-payment',
   templateUrl: './home-ticket-payment.page.html',
@@ -15,11 +16,16 @@ export class HomeTicketPaymentPage implements OnInit {
     child_price: 390000,
     total: 0,
     full_name: "",
-    date: new Date().toJSON().slice(0, 10)
+    company_name: 'Suối Tiên',
+    ticket_name: "Vé tour tham quan Suối Tiên",
+    date: new Date().toJSON().slice(0, 10),
+    img_url: 'https://www.suoitien.com//Data/Sites/1/Banner/Default/default.png'
   }
   date_format = "0";
+  list_booking = [];
   constructor(
-    private navCrl: NavControllerService
+    private navCrl: NavControllerService,
+    private ev: Events,
   ) { }
 
   ngOnInit() {
@@ -30,7 +36,12 @@ export class HomeTicketPaymentPage implements OnInit {
   }
 
   BookNow() {
-    this.cart.id = 'FC1562387115';
+    if (localStorage.getItem("BookingOrder") != null || localStorage.getItem("BookingOrder") != undefined) {
+      this.list_booking = JSON.parse(localStorage.getItem("BookingOrder"));
+    }
+    this.list_booking.unshift(this.cart);
+    localStorage.setItem("BookingOrder", JSON.stringify(this.list_booking));
     this.navCrl.push("booking-detail", { cart: this.cart, paymentPage: true });
+    this.ev.publish("update_listBooking", "1");
   }
 }

@@ -9,13 +9,17 @@ import { NavControllerService } from 'src/app/services';
 export class HomeTicketBookingFormPage implements OnInit {
 
   cart = {
+    id: 'FC' + this.genRandomNumberString(10, "num"),
     adult_quantity: 0,
     adult_price: 590000,
     child_quantity: 0,
     child_price: 390000,
     total: 0,
     full_name: "",
+    company_name: 'Suối Tiên',
+    ticket_name: "Vé tour tham quan Suối Tiên",
     date: new Date().toJSON().slice(0, 10),
+    img_url: 'https://www.suoitien.com//Data/Sites/1/Banner/Default/default.png'
   }
   currentDay: string;
   constructor(
@@ -64,5 +68,27 @@ export class HomeTicketBookingFormPage implements OnInit {
   Booking() {
     this.cart.date = moment(this.cart.date).format('YYYY-MM-DD');
     this.navCrl.push('home-ticket-payment', { cart: this.cart });
+  }
+
+  genRandomNumberString(numberRan, type?: any) {
+    numberRan = numberRan || 5;
+    type = type || 'all';
+    var text = "", possible = "";
+    switch (type) {
+      case 'all':
+        possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+        break;
+      case 'num':
+        possible = "0123456789";
+        break;
+      case 'str':
+        possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+        break;
+    }
+
+    for (var i = 0; i < numberRan; i++)
+      text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+    return text;
   }
 }
