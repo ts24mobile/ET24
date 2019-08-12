@@ -14,15 +14,15 @@ export class HomePage implements OnInit {
   ) { }
 
   ngOnInit() {
-    let Code_model = new Code_SuoiTien_Model();
-    Code_model.phamViSuDung = "1";
-    Code_model.maHieuQuayVe = "12";
-    Code_model.ngayTaoMa = "190714";
-    Code_model.loaiDichVu = "326";
-    Code_model.kiemSoatRaVao = "0502";
-    Code_model.soThuTu = "00139";
-    Code_model.generate_maVe();
-    console.log(Code_model);
+    // let Code_model = new Code_SuoiTien_Model();
+    // Code_model.phamViSuDung = "1";
+    // Code_model.maHieuQuayVe = "12";
+    // Code_model.ngayTaoMa = "190714";
+    // Code_model.loaiDichVu = "326";
+    // Code_model.kiemSoatRaVao = "0502";
+    // Code_model.soThuTu = "00139";
+    // Code_model.generate_maVe();
+    // console.log(Code_model);
   }
 
   place_onClick() {

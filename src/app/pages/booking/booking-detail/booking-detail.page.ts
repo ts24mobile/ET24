@@ -23,12 +23,12 @@ export class BookingDetailPage implements OnInit {
       this.date_format = moment(this.cart.date).format('DD-MM-YYYY');
       if (this.cart.customer_group == 1) {
         this.cart_createdCode.push({
-          ticket_price: this.cart.adult_price,
+          ticket_price: this.cart.total,
           company_name: 'Suối Tiên',
           ticket_name: 'Vé tour tham quan Suối Tiên',
           ticket_type: 'Vé đoàn',
           ticket_adult_quantity: this.cart.adult_quantity,
-          ticket_child_quantity:  this.cart.child_quantity,
+          ticket_child_quantity: this.cart.child_quantity,
           ticket_customer: this.cart.full_name,
           ticket_id: this.cart.id,
           ticket_date: this.cart.date,
