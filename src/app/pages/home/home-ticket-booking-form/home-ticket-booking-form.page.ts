@@ -19,7 +19,8 @@ export class HomeTicketBookingFormPage implements OnInit {
     company_name: 'Suối Tiên',
     ticket_name: "Vé tour tham quan Suối Tiên",
     date: new Date().toJSON().slice(0, 10),
-    img_url: 'https://www.suoitien.com//Data/Sites/1/Banner/Default/default.png'
+    img_url: 'https://www.suoitien.com//Data/Sites/1/Banner/Default/default.png',
+    customer_group: "0"
   }
   currentDay: string;
   constructor(
@@ -67,6 +68,7 @@ export class HomeTicketBookingFormPage implements OnInit {
 
   Booking() {
     this.cart.date = moment(this.cart.date).format('YYYY-MM-DD');
+    console.log(this.cart);
     this.navCrl.push('home-ticket-payment', { cart: this.cart });
   }
 

@@ -19,7 +19,8 @@ export class HomeTicketPaymentPage implements OnInit {
     company_name: 'Suối Tiên',
     ticket_name: "Vé tour tham quan Suối Tiên",
     date: new Date().toJSON().slice(0, 10),
-    img_url: 'https://www.suoitien.com//Data/Sites/1/Banner/Default/default.png'
+    img_url: 'https://www.suoitien.com//Data/Sites/1/Banner/Default/default.png',
+    customer_group: "0"
   }
   date_format = "0";
   list_booking = [];

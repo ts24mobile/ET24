@@ -88,7 +88,33 @@
                 class="klk_counter__icon_row"></i> <i class="klk_counter__icon_col"></i></p>
           </div>
         </div>
+
+
       </div>
+              <!-- Loai hinh dat-->
+              <ion-radio-group  [(ngModel)]="cart.customer_group">
+                  <ion-list-header>
+                     Chọn loại hình mua vé
+                    </ion-list-header>
+                <ion-row>
+                  <ion-col>
+                       <ion-item>
+                          <ion-label>Khách lẻ</ion-label>
+                          <ion-radio slot="start" value="0"></ion-radio>
+                     </ion-item>
+                   </ion-col>
+              
+                  <ion-col>
+                      <ion-item>
+                          <ion-label>Khách đoàn</ion-label>
+                          <ion-radio  slot="start" value="1"></ion-radio>
+                     </ion-item>
+                  </ion-col>
+              
+      
+              
+              </ion-row>
+              </ion-radio-group>
     </div>
   </div>
   <div class="booking_wifi_bottom_placeholder"></div>
